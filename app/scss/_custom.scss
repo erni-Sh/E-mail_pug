@@ -1,3 +1,12 @@
-h1 {
-	color: green;
+.letter-header {
+	background-color: $primary-color;
+}
+
+.top-img {
+	height: 180px;
+	&__title {
+		color:  $primary-color;
+		font-weight: 600;
+		margin-bottom: 0;
+	}
 }
