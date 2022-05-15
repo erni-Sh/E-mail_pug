@@ -4,5 +4,5 @@
 
 Возникла мысль добавить предпроцессор Pug. На мой взгляд, это сократило код и восприятие.
 
-Посмотреть результат в папке [dist](https://erni-sh.github.io/E-mail_pug.github.io/dist/)
+Посмотреть результат [https://erni-sh.github.io/E-mail_pug/dist/](https://erni-sh.github.io/E-mail_pug/dist/)
 
