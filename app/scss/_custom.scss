@@ -13,10 +13,10 @@ body {
 
 .top-img {
 	height: 180px;
-	background-image: url(https://erni-sh.github.io/E-mail_pug/dist/assets/img/top-img.jpg);
+	background-image: url('https://erni-sh.github.io/E-mail_pug/dist/assets/img/top-img.jpg');
 	background-size: cover;
   background-position: right;
-  
+
 	&__title {
 		color: $primary-color;
 		font-weight: 600;
@@ -88,7 +88,7 @@ body {
 		&_has-plus {
 			&:after {
 				position: absolute;
-				content: url('assets/img/plus.png');
+				content: url('https://erni-sh.github.io/E-mail_pug/dist/assets/img/plus.png');
 				right: -22px;
 				top: 50%;
 				transform: translateY(-50%);
@@ -118,7 +118,7 @@ body {
 
 		&:after {
 			position: absolute;
-			content: url(assets/img/arrow-yellow.png);
+			content: url('https://erni-sh.github.io/E-mail_pug/dist/assets/img/arrow-yellow.png');
 			right: -31px;
     	top: -8px;
 		}
