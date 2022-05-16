@@ -1,3 +1,7 @@
+body {
+	min-width: 375px;
+}
+
 .letter-header {
 	background-color: $primary-color;
 	height: 86px;
@@ -9,6 +13,10 @@
 
 .top-img {
 	height: 180px;
+	background-image: url(https://erni-sh.github.io/E-mail_pug/dist/assets/img/top-img.jpg);
+	background-size: cover;
+  background-position: right;
+  
 	&__title {
 		color: $primary-color;
 		font-weight: 600;
@@ -65,17 +73,27 @@
 	margin-bottom: 13px;
 }
 
-// TODO стрелка и плюсики
 .treatment {
 	background: linear-gradient(-45deg, #fff 16%, #eee 0, #eee 33%, #fff 0, #fff 66%, #eee 0, #eee 83%, #fff 0) !important;
 	background-size: 5px 5px !important;
 
 	&__wrapper {
+		position: relative;
 		margin-top: 22px;
 		padding: 12px 1px 0;
 		background-color: white;
 		border: solid 1px #FFC72C;
 		min-height: 91px;
+
+		&_has-plus {
+			&:after {
+				position: absolute;
+				content: url('assets/img/plus.png');
+				right: -22px;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
 	}
 
 	&__text {
@@ -89,12 +107,20 @@
 	}
 
 	&__arrow {
+		position: relative;
 		border: solid 1px #FFC72C;
 		background-color: #fff;
-		margin: 5px 0 9px;
+		margin: 5px 31px 9px 0;
 		&__text {
-			font-size: 1.27em;
+			font-size: 1.22em;
 			margin: 4px 0;
+		}
+
+		&:after {
+			position: absolute;
+			content: url(assets/img/arrow-yellow.png);
+			right: -31px;
+    	top: -8px;
 		}
 	}
 }
@@ -213,17 +239,39 @@
 	}
 
 	&__green-wrapper {
+		position: relative;
 		min-height: 78px;
 		background-color: $primary-color;
 		border-radius: 7px;
 	}
 
-	// TODO vertical-align
 	&__green-text {
+		display: inline-block;
 		text-align: center;
 		color: white;
 		margin-bottom: 0;
 		vertical-align: middle;
+	}
+
+	&__green-callout {
+		position: absolute;
+		text-align: center;
+		border: 2px solid $secondary-color;
+		border-radius: 5px;
+		padding: 0px 3px;
+		line-height: .9;
+    top: -77px;
+    right: -28px;
+    
+    &:after {
+    	position: absolute;
+    	content: '';
+    	border-left: 2px solid $secondary-color;
+    	height: 50px;
+    	right: 17px;
+    	top: 93%;
+    	transform: rotate(37deg);
+    }
 	}
 
 	&__text-bottom {
@@ -231,8 +279,6 @@
 		text-align: center;
 	}
 }
-
-// TODO 2 месяца
 
 .sources {
 	background-color: #ECECEC !important;

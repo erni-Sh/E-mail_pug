@@ -1,10 +1,10 @@
 extends ./layouts/default.pug
 
 block title
-	| My Marketing Email Template Subject
+	| Осень – сезон обострения гастритов
 
 block description
-	| Description
+	| 
 
 block main
 	container
@@ -13,10 +13,10 @@ block main
 			columns(small='3' valign="middle")
 				img(src='https://erni-sh.github.io/E-mail_pug/dist/assets/img/logo.jpg').letter-header__img
 			columns(small='9')
-		row.top-img(style="background-image: url(https://erni-sh.github.io/E-mail_pug/dist/assets/img/top-img.jpg)")
-			columns(small='7' valign="middle").primary
+		row.top-img
+			columns(large="7" small='8' valign="middle").primary
 				h1.top-img__title Осень – сезон  обострения гастритов
-			columns(small='5' valign="middle")
+			columns(large="5" small='4' valign="middle")
 		
 		row
 			columns(small="12" valign="middle")
@@ -43,12 +43,12 @@ block main
 	container.treatment
 		row
 			columns(small="5")
-				div.treatment__wrapper
+				div.treatment__wrapper.treatment__wrapper_has-plus
 					p.treatment__text.text__bold ИПП&nbsp;&mdash; стандартная дозировка 2&nbsp;раза в&nbsp;сутки (например, Париет
 						sup ®
 						| )
 			columns(small="3")
-				div.treatment__wrapper
+				div.treatment__wrapper.treatment__wrapper_has-plus
 					p.treatment__text.text__bold Кларитромицин 500 мг 2 раза в сутки (например, Клацид
 						sup ®
 						| )				
@@ -207,6 +207,10 @@ block main
 			columns(small="1")
 			columns(small="5")
 				.therapy__green-wrapper
+					p.therapy__green-callout.text__secondary 
+						b 2 
+							br
+							| месяца
 					p.therapy__green-text.text__secondary
 						b Курсовая терапия диспепсических симптомов
 			columns(small="1")
@@ -218,7 +222,6 @@ block main
 						| следует принимать
 						br 
 						| по 1 таблетке 3 раза в сутки до еды
-
 
 	container.sources
 		spacer(size="16")
@@ -238,8 +241,6 @@ block main
 				p.text__small 10. Маев И.В., Трухманов А.С., Шептулин А.А. Роль нарушений моторики в патогенезе функциональных расстройств желудочно-кишечного тракта и современные возможности их лечения (Резолюция Экспертного совета и обзор литературы). РЖГГК. 2019;29(6):7-14.
 				p.text__small 11. Инструкция по медицинскому применению препарата Ганатон® 50 мг таблетки, покрытые оболочкой, от 16.07.2019
 		spacer(size="8")
-
-
 
 	container
 		spacer(size="16")

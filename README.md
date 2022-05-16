@@ -6,3 +6,7 @@
 
 Посмотреть результат [https://erni-sh.github.io/E-mail_pug/dist/](https://erni-sh.github.io/E-mail_pug/dist/)
 
+Впервые работаю с Foundation for Emails, не все стили и специфику знаю, поэтому возможно что-то выглядит не совсем оптимально.
+
+
+
