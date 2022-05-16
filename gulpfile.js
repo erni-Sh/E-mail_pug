@@ -93,7 +93,7 @@ gulp.task('watch-local', function(done){
 
 // -------------------------------------------------
 gulp.task('default', gulp.series(
-  'clean',
+  // 'clean',
   'scss',
   'pug-local',
   // 'panini',

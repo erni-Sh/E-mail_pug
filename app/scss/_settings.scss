@@ -17,7 +17,7 @@
 // ---------
 
 $primary-color: #509E2F;
-$secondary-color: #777777;
+$secondary-color: #FFC72C;
 $success-color: #3adb76;
 $warning-color: #ffae00;
 $alert-color: #ec5840;
@@ -32,7 +32,7 @@ $global-width-small: 95%;
 $global-gutter: 25px;
 $body-background: $light-gray;
 $container-background: $white;
-$global-padding: 25px;
+$global-padding: 10px;
 $global-margin: 16px;
 $global-radius: 3px;
 $global-rounded: 500px;
@@ -56,6 +56,8 @@ $block-grid-gutter: $global-gutter;
 
 $global-font-color: $black;
 $body-font-family: Calibri, sans-serif;
+$secondary-font-family: Georgia, serif;
+$third-font-family: Arial, sans-serif;
 $global-font-weight: normal;
 $header-color: inherit;
 $global-line-height: 1.3;

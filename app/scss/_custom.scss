@@ -1,12 +1,253 @@
 .letter-header {
 	background-color: $primary-color;
+	height: 86px;
+
+	&__img {
+		margin-top: 11px;
+	}
 }
 
 .top-img {
 	height: 180px;
 	&__title {
-		color:  $primary-color;
+		color: $primary-color;
 		font-weight: 600;
 		margin-bottom: 0;
+	}
+}
+
+.text {
+	&__secondary {
+		font-family: $secondary-font-family;
+		font-size: 1.25em;
+		line-height: 1.25;
+	}
+
+	&__small {
+		font-size: 8px;
+		margin-bottom: 0;
+	}
+	&__italic {
+		font-style: italic;
+	}
+	// &__bold {
+	// 	font-weight: 600;
+	// }
+	&__sup {
+		font-size: .6em;
+	}
+}
+
+.pylori {
+	border: solid 1px $primary-color;
+	margin: 32px 0 10px;
+
+	&__img {
+		margin: 10px 0 0 !important;
+	}
+
+	&__text {
+		font-size: 1.25em;
+		font-weight: 600;
+		margin: 10px 0 0;
+
+		&__primary {
+			color: $primary-color;
+		}
+
+		&__italic {
+			font-style: italic;
+		}
+	}
+}
+
+.recommendations {
+	margin-bottom: 13px;
+}
+
+// TODO стрелка и плюсики
+.treatment {
+	background: linear-gradient(-45deg, #fff 16%, #eee 0, #eee 33%, #fff 0, #fff 66%, #eee 0, #eee 83%, #fff 0) !important;
+	background-size: 5px 5px !important;
+
+	&__wrapper {
+		margin-top: 22px;
+		padding: 12px 1px 0;
+		background-color: white;
+		border: solid 1px #FFC72C;
+		min-height: 91px;
+	}
+
+	&__text {
+		font-family: $secondary-font-family;
+		line-height: 1.2;
+		text-align: center;
+
+		&_top {
+			margin-top: 10px;
+		}
+	}
+
+	&__arrow {
+		border: solid 1px #FFC72C;
+		background-color: #fff;
+		margin: 5px 0 9px;
+		&__text {
+			font-size: 1.27em;
+			margin: 4px 0;
+		}
+	}
+}
+
+.course {
+	&__text {
+		position: relative;
+		margin-left: 20px;
+		font-family: $secondary-font-family;
+		font-size: 1.2em;
+		letter-spacing: .03em;
+
+		&:before {
+			content: '';
+			position: absolute;
+			left: -20px;
+			top: 3px;
+			width: 0;
+      height: 0;
+      border-top: 9px solid transparent;
+      border-bottom: 9px solid transparent;
+      border-left: 14px solid $primary-color;
+		}
+	}
+}
+
+.banner {
+	height: 181px;
+	background-color: $primary-color;
+
+	&__text {
+		font-family: $secondary-font-family;
+		color: white;
+		font-size: 1.25em;
+		line-height: 1.2;
+	}
+}
+
+.complaints {
+	border-top: 1px solid $secondary-color;
+
+	&__text {
+		margin-top: 20px;
+	}
+}
+
+.reasons {
+	&__title {
+		color: $primary-color;
+		font-family: $secondary-font-family;
+	}
+
+	&__text {
+		color: $primary-color;
+		text-align: center;
+		font-size: 1.2em;
+		font-family: $third-font-family;
+	}
+
+	&__arrow {
+		&:after {
+			display: block;
+			content: url('/assets/img/arrow-green-down.png');
+			margin-top: 14px;
+		}
+	}
+
+	&__simptoms {
+		position: relative;
+		&__img {
+			position: absolute;
+			display: inline-block;
+		}
+
+		.reasons__text {
+			margin-left: 32px;
+			text-align: left;
+		}
+	}
+}
+
+.restore {
+	border: 1px solid $primary-color;
+	min-height: 174px;
+
+	&__img-wrapper {
+		text-align: center;
+	}
+
+	&__img {
+		display: inline-block;
+		margin: 7px;
+	}
+
+	&__text {
+		font-size: 1.2em;
+		margin-bottom: 0;
+		margin-left: 10px;
+	}
+}
+
+.therapy {
+	&__title-wrapper {
+		border-top: 1px solid $secondary-color;
+	}
+
+	&__title {
+		text-align: center;
+		margin-top: 13px;
+	}
+
+	&__text {
+		margin: auto;
+		text-align: center;
+		max-width: 163px;
+	}
+
+	&__green-wrapper {
+		min-height: 78px;
+		background-color: $primary-color;
+		border-radius: 7px;
+	}
+
+	// TODO vertical-align
+	&__green-text {
+		text-align: center;
+		color: white;
+		margin-bottom: 0;
+		vertical-align: middle;
+	}
+
+	&__text-bottom {
+		margin-top: 10px;
+		text-align: center;
+	}
+}
+
+// TODO 2 месяца
+
+.sources {
+	background-color: #ECECEC !important;
+
+	&__title {
+		font-size: 15px;
+	}
+}
+
+.footer {
+	&__hr {
+		border-top: 1px solid gray;
+	}
+
+	&__logo {
+		margin-top: 6px;
 	}
 }
