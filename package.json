@@ -1,12 +1,12 @@
 {
-  "name": "leader-qr",
+  "name": "",
   "version": "1.0.0",
-  "description": "LeaderID mobile",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Svetlana Dyatko",
+  "author": "",
   "license": "ISC",
   "devDependencies": {
     "animate.css": "^4.1.1",
