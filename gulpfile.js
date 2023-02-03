@@ -73,6 +73,10 @@ gulp.task('pug-local', function(){
 
 gulp.task('browser-sync', function() {
   browserSync.init({
+      port: 5050,
+      ui: false,
+      open: false,
+      notify: true,
       server: {
           baseDir: 'dist/',
           routes : {
