@@ -11,10 +11,13 @@ const gulp = require('gulp'),
       uglify = require('gulp-uglify'),
       concat = require('gulp-concat'),
 
-      rimraf = require('rimraf'),
+      clean = require('gulp-rimraf'),
       inky = require('inky'),
       panini = require('panini'),
-
+      inlineCss = require('gulp-inline-css'),
+      base64 = require('gulp-base64-inline'),
+      // base64 = require('gulp-base64'),
+      // cssBase64 = require('gulp-css-base64'),
       wait = require('gulp-wait'),
       gutil = require('gutil'),
       ftp = require('vinyl-ftp');
@@ -37,14 +40,19 @@ gulp.task('scss', function(){
         overrideBrowserslist: ['last 8 versions']
       }))
     .pipe(rename({suffix: '.min'}))
+    .pipe(base64())
+
+    // for deploy
+    // .pipe(gulp.dest('app/css'))
+
+    //for dev
     .pipe(sourcemaps.write('.', {includeContent: false, sourceRoot: 'static/css'}))
-    // .pipe(gulp.dest('dist/css'))
-    .pipe(gulp.dest('app/css'))
+    .pipe(gulp.dest('dist/css'))
     .pipe(browserSync.reload({stream: true}))
 });
 
-gulp.task('clean', function (done) {
-  rimraf('dist/', done);
+gulp.task('clean', function() {
+  return gulp.src('dist/*', { read: false }).pipe(clean());
 });
 
 // gulp.task('panini', function() {
@@ -67,6 +75,18 @@ gulp.task('pug-local', function(){
         title: "PUG ERROR"
     })))
     .pipe(inky())
+    .pipe(base64('',{
+      prefix: "",
+      suffix: ""
+    }))
+    // for deploy
+    // .pipe(inlineCss({
+    //   // url: env._host,
+    //   applyStyleTags: true,
+    //   removeStyleTags: true,
+    //   preserveMediaQueries: true,
+    //   removeLinkTags: true
+    // }))
     .pipe(gulp.dest('dist/'))
     .pipe(browserSync.reload({stream: true}))
 });
@@ -97,7 +117,7 @@ gulp.task('watch-local', function(done){
 
 // -------------------------------------------------
 gulp.task('default', gulp.series(
-  // 'clean',
+  'clean',
   'scss',
   'pug-local',
   // 'panini',

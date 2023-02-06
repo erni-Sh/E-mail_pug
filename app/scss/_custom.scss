@@ -1,3 +1,156 @@
+@import '_settings.scss';
+$blue-background: #EAF7FF;
+
 body {
 	min-width: 600px;
+}
+
+.container {
+	border-radius: 20px;
+	overflow: hidden;
+}
+
+.mail_container {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+table.button {
+	margin-left: auto;
+	margin-right: auto;
+	table td {
+		border-radius: 24px;
+	}
+}
+
+.header {
+	&__wrapper {
+		background-image: inline('../assets/digest_top_BG.svg');
+		background-size: contain;
+	}
+
+	&__subtitle {
+		font-size: 10px;
+		text-align: center;
+		color: $white;
+	}
+
+	&__title {
+		line-height: 50px;
+		text-align: center;
+		background: linear-gradient(100.96deg, #FFDB7F 19.88%, #F9B400 51.48%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		text-fill-color: transparent;
+
+		&__wrapper {
+			padding-bottom: 1px !important;
+		}
+	}
+
+	&__descr {
+		text-align: center;
+		color: $white;
+		margin-bottom: 9px;
+	}
+
+}
+
+.blueParagraph {
+	background: $blue-background;
+	padding-top: 15px;
+	padding-right: 17px;
+	padding-bottom: 9px;
+	padding-left: 17px;
+	border-radius: 12px;
+
+	h6 {
+	}
+
+	&__content {
+
+	}
+}
+
+.appCard {
+	background: #FFFFFF;
+	padding-top: 8px;
+	padding-right: 8px;
+	padding-bottom: 8px;
+	padding-left: 8px;
+	margin-bottom: 4px;
+
+	box-shadow: 0px 4px 21px rgba(0, 0, 0, 0.25);
+	border-radius: 12px;
+	border: white 1px solid;
+	transition: .3s ease all;
+	cursor: pointer;
+
+	&__img {
+		border-radius: 8px;
+	}
+
+	&__title, &__descr {
+		font-size: 10px;
+		line-height: 11px;
+	}
+	&__descr {
+		opacity: 0.5;
+	}
+	@media (hover: hover) {
+		&:hover {
+			background: $yellow;
+		}
+	}
+}
+
+.popular {
+	background: #2A1B68;
+	background: radial-gradient(61.47% 255.37% at 16.14% 21.32%, rgba(0, 172, 238, 0.2) 0%, rgba(0, 0, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, linear-gradient(89.97deg, #2C1A72 0.03%, #261667 99.97%);
+	border-radius: 12px;
+	padding-left: 35px;
+	padding-right: 35px;
+
+	&__img {
+		position: absolute;
+		top: -13px;
+		left: -31px;
+	}
+
+	&__title {
+		color: $white;
+	}
+	&__version {
+		color: $white;
+		text-align: right;
+	}
+	&__descr {
+		color: $white;
+	}
+}
+
+.footer {
+	&__wrapper {
+		background-color: #2A1B68;
+	}
+
+	&__left {
+		font-size: 10px;
+		color: $white;
+	}
+}
+
+.social {
+	text-align: right;
+	a {
+		display: inline-block;
+	}
+	a + a {
+		margin-left: 24px;
+	}
+}
+
+.pb-0 {
+	padding-bottom: 0 !important;
 }

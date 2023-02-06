@@ -8,35 +8,157 @@ block description
 
 block main
 	container
-		//- spacer(size='86').letter-header
-		row.letter-header
-			columns(small='3' valign="middle")
-				img(src='https://erni-sh.github.io/E-mail_pug/dist/assets/img/logo.jpg').letter-header__img
-			columns(small='9')
-		row.top-img
-			columns(large="7" small='8' valign="middle").primary
-				h1.top-img__title Осень – сезон  обострения гастритов
-			columns(large="5" small='4' valign="middle")
-		
-		row
-			columns(small="12" valign="middle")
-				row.pylori
-					columns(small="4" valign="middle")
-						center
-							img(src='https://erni-sh.github.io/E-mail_pug/dist/assets/img/pylori.png').pylori__img
-					columns(small="8" valign="middle")
-						p.pylori__text.text__secondary В 
-							span.pylori__text__primary 90%
-							| случаев причина гастрита – инфекция 
-							span.text__italic H. pylori
-							sup.text__sup 1
-		row.recommendations
-			columns(small="12" valign="middle")
-				p.text__secondary Согласно рекомендациям РГА «Лечение инфекции 
-					span.text__italic Helicobacter pylori: мейнстрим и новации» 
-					b 1-я линия стандартной тройной терапии 
-					| (ИПП + 
-					b кларитромицин 
-					| + амоксициллин или метронидазол) 
-					b считается наиболее изученной
-					sup.text__sup 2
+		//- -------------------------  HEADER ------------------------
+		.mail_container.header__wrapper
+			row
+				columns.header
+					spacer(size=32)
+					row
+						columns(small='6')
+							img(src="inline(../assets/logo.svg)")
+						columns(small='6')
+							include includes/social_list
+					spacer(size=19)
+					row
+						columns
+							.header__subtitle January 2023
+					spacer(size=7)
+					row
+						columns.header__title__wrapper
+							h1.header__title Digest #1
+					row
+						columns
+							.header__descr Hey, BuildStore’s here with the latest and hottest updates of January!
+
+		.mail_container
+			//- -------------------------  FIRST PARAGRAPH ------------------------
+			spacer(size=32)
+			row
+				columns
+					.blueParagraph
+						h6 Dear, [Username]
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua. Ut&nbsp;enim ad&nbsp;minim veniam, quis nostrud exercitation ullamco laboris nisi ut&nbsp;aliquip ex&nbsp;ea&nbsp;commodo consequat. Duis aute irure dolor in&nbsp;reprehenderit in&nbsp;voluptate velit esse cillum dolore eu&nbsp;fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in&nbsp;culpa qui officia deserunt mollit anim id&nbsp;est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua. Ut&nbsp;enim ad&nbsp;minim veniam
+
+			//- -------------------------  TOP NEWS ------------------------
+			spacer(size=28)
+			row
+				columns
+					h5.text-center Top news!
+
+			row
+				columns
+					.blueParagraph
+						h6 BuildStore now supports iPhone 18!
+						p We&nbsp;worked so&nbsp;hard to&nbsp;update the system, and now you can finally enjoy&nbsp;it!
+
+			spacer(size='4')
+			row
+				columns
+					.blueParagraph
+						h6 BuildStore now supports iPhone 18!
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+			//- -------------------------  APP UPDATES ------------------------
+			spacer(size=28)
+			row
+				columns
+					h5.text-center Apps Updates
+
+			row
+				columns(small='4')
+					include includes/app-card
+				columns(small='4')
+					include includes/app-card
+				columns(small='4')
+					include includes/app-card
+			row
+				columns(small='4')
+					include includes/app-card
+				columns(small='4')
+					include includes/app-card
+				columns(small='4')
+					include includes/app-card
+			row
+				columns(small='4')
+					include includes/app-card
+				columns(small='4')
+					include includes/app-card
+				columns(small='4')
+					include includes/app-card
+
+			//- -------------------------  NEW APP ------------------------
+			spacer(size=22)
+			row
+				columns
+					h5.text-center New Apps
+
+			row
+				columns(small='4')
+					include includes/app-card
+				columns(small='4')
+					include includes/app-card
+				columns(small='4')
+					include includes/app-card
+			row
+				columns(small='4')
+					include includes/app-card
+				columns(small='4')
+					include includes/app-card
+				columns(small='4')
+					include includes/app-card
+
+			//- ---------------------  Most popular newcomer! --------------------
+			spacer(size=24)
+			row
+				columns
+					h5.text-center Most popular newcomer!
+
+			spacer(size=2)
+			row
+				columns
+					.popular
+						row
+							columns(small=4)
+								img(src='inline(../assets/popular-img.svg)').popular__img
+							columns(small=8 valign='middle').pb-0
+								spacer(size=30)
+								row
+									columns(small=8).pb-0
+										h6.popular__title AngryBird Exclusive Version
+									columns(small=4)
+										.popular__version Version 3.21
+								row
+									columns(small=12).pb-0
+										p.popular__descr A long time ago in a galaxy far, far away... a group of desperate rebel birds faced off against a galactic menace: the Empire’s evil Pigtroopers!
+								spacer(size=6)
+
+
+
+			//- -------------------------  OFFER ------------------------
+			spacer(size=29)
+			row
+				columns
+					p.text-center Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+
+			spacer(size=21)
+			row
+				columns
+					button
+						a.button.large(href="#") GO TO BUILDSTORE
+
+			spacer(size=13)
+			row
+				columns
+					p.text-center Best, BuildStore Team
+			spacer(size=21)
+
+		//- -------------------------  FOOTER ------------------------
+		.mail_container.footer__wrapper
+			spacer(size=18)
+			row
+				columns(small='6' valign='middle')
+					.footer__left
+						| © BuildStore 2022
+				columns(small='6' valign='middle')
+					include includes/social_list
+			spacer(size=5)
