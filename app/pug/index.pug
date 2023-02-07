@@ -1,7 +1,7 @@
 extends ./layouts/default.pug
 
 block title
-	| Осень – сезон обострения гастритов
+	| BuildStore. Digest #1
 
 block description
 	| 
@@ -15,7 +15,13 @@ block main
 					spacer(size=32)
 					row
 						columns(small='6')
-							img(src="inline(../assets/logo.svg)")
+							//- img(src="inline(../assets/logo.svg)")
+							img(
+								src="https://mcusercontent.com/6e30f56d8fc665b08934fa73c/images/bcfbc30b-fb16-0e41-9005-23e317709480.png"
+								alt='logo'
+								width=101
+								height=17
+							)
 						columns(small='6')
 							include includes/social_list
 					spacer(size=19)
@@ -59,10 +65,11 @@ block main
 						p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 			//- -------------------------  APP UPDATES ------------------------
-			spacer(size=28)
-			row
-				columns
-					h5.text-center Apps Updates
+			.appUpdates__wrapper
+				spacer(size=28)
+				row
+					columns
+						h5.text-center Apps Updates
 
 			row
 				columns(small='4')
@@ -87,10 +94,11 @@ block main
 					include includes/app-card
 
 			//- -------------------------  NEW APP ------------------------
-			spacer(size=22)
-			row
-				columns
-					h5.text-center New Apps
+			.newApp__wrapper
+				spacer(size=22)
+				row
+					columns
+						h5.text-center New Apps
 
 			row
 				columns(small='4')
@@ -118,8 +126,9 @@ block main
 				columns
 					.popular
 						row
-							columns(small=4)
-								img(src='inline(../assets/popular-img.svg)').popular__img
+							columns(small=4 valign='bottom').pb-0
+								//- img(src='inline(../assets/popularApp-icon.png)' width=120 height=107).popular__img
+								img(src='https://mcusercontent.com/6e30f56d8fc665b08934fa73c/images/d37daa26-ca02-4a11-f028-657ba896c156.png' width=120 height=107).popular__img
 							columns(small=8 valign='middle').pb-0
 								spacer(size=30)
 								row
@@ -143,8 +152,9 @@ block main
 			spacer(size=21)
 			row
 				columns
-					button
-						a.button.large(href="#") GO TO BUILDSTORE
+					center
+						button
+							a.button.large(href="#") GO TO BUILDSTORE
 
 			spacer(size=13)
 			row

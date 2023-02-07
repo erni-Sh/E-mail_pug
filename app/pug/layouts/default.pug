@@ -4,26 +4,20 @@ html(xmlns='http://www.w3.org/1999/xhtml' lang='ru' xml:lang='ru')
 		link(rel="preconnect" href="https://fonts.googleapis.com")
 		link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
 		link(href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600;700;800;900&display=swap" rel="stylesheet")
-		// for dev
-		link(rel='stylesheet' type='text/css' href='css/styles.min.css')
+		//- for dev
+		//- link(rel='stylesheet' type='text/css' href='css/styles.min.css')
 
 		meta(http-equiv='Content-Type' content='text/html; charset=utf-8')
 		meta(name='viewport' content='width=device-width')
 		title
 			block title
-		// <style>
-	body
 		style
-			//for deploy
-			//include ../../css/styles.min.css
+			//- for deploy
+			include ../../css/styles.min.css
+	body
 		span.preheader
 			block description
 		block main
-		//table.body
-		//	tbody
-		//		tr
-		//			td.center(align='center' valign='top')
-		//				center
 
 		//- prevent Gmail on iOS font size manipulation
-		div(style='display:none; white-space:nowrap; font:15px courier; line-height:0;')                                                              
+		//div(style='display:none; white-space:nowrap; font:15px courier; line-height:0;')                                                             

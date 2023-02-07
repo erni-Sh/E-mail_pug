@@ -32,7 +32,7 @@ gulp.task('scss', function(){
     //     message: "Error: <%= error.message %>",
     //     title: "SASS ERROR"
     // })))
-    .pipe(sass({outputStyle: 'compressed'}).on('error', notify.onError({
+    .pipe(sass({outputStyle: 'expanded'}).on('error', notify.onError({
         message: "Error: <%= error.message %>",
         title: "SASS ERROR"
     })))
@@ -43,12 +43,12 @@ gulp.task('scss', function(){
     .pipe(base64())
 
     // for deploy
-    // .pipe(gulp.dest('app/css'))
+    .pipe(gulp.dest('app/css'))
 
     //for dev
-    .pipe(sourcemaps.write('.', {includeContent: false, sourceRoot: 'static/css'}))
-    .pipe(gulp.dest('dist/css'))
-    .pipe(browserSync.reload({stream: true}))
+    // .pipe(sourcemaps.write('.', {includeContent: false, sourceRoot: 'static/css'}))
+    // .pipe(gulp.dest('dist/css'))
+    // .pipe(browserSync.reload({stream: true}))
 });
 
 gulp.task('clean', function() {
@@ -70,7 +70,7 @@ gulp.task('clean', function() {
 
 gulp.task('pug-local', function(){
   return gulp.src('app/pug/*.pug')
-    .pipe(pug({pretty: false}).on('error', notify.onError({
+    .pipe(pug({pretty: true}).on('error', notify.onError({
         message: "Error: <%= error.message %>",
         title: "PUG ERROR"
     })))
