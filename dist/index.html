@@ -1,12 +1,15 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="ru" xml:lang="ru">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
   <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600;700;800;900&amp;display=swap" rel="stylesheet">
+    <!--link(rel='stylesheet' type='text/css' href='css/styles.min.css')-->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>BuildStore. Digest #1
+    <meta name="color-scheme" content="light dark">
+    <meta name="supported-color-schemes" content="light dark">
+    <title>BuildStore's hottest winter news
     </title>
     <style>.wrapper {
   width: 100%;
@@ -1671,18 +1674,25 @@ body {
   padding-top: 10px;
   padding-bottom: 10px;
   background: #f3f3f3;
-  min-width: 600px;
 }
 
 .container {
   border-radius: 20px;
   border: #f3f3f3 1px solid;
+  background-color: #fcfdff !important;
   overflow: hidden;
+  width: auto !important;
+  max-width: 600px;
 }
 
 .mail_container {
   padding-left: 15px;
   padding-right: 15px;
+}
+@media (prefers-color-scheme: dark) {
+  .mail_container {
+    background-color: #1E0871;
+  }
 }
 
 table.button {
@@ -1693,10 +1703,14 @@ table.button table td {
   border-radius: 24px;
 }
 
+.img_button {
+  display: inline-block;
+  width: 214px;
+  height: 48px;
+}
+
 .header__wrapper {
-  background-image: url(https://mcusercontent.com/6e30f56d8fc665b08934fa73c/images/9cc9972d-ea53-f7c6-d5fd-03cf2b3836e2.jpeg);
-  background-size: contain;
-  display: table-cell;
+  display: table;
 }
 .header__subtitle {
   font-size: 10px;
@@ -1726,19 +1740,24 @@ table.button table td {
   border-radius: 12px;
 }
 .appUpdates__wrapper {
-  display: table-cell;
   background-image: url(https://mcusercontent.com/6e30f56d8fc665b08934fa73c/images/57c9a312-69dc-9672-250c-79f7b98fe9a2.png);
   background-repeat: no-repeat;
   background-position: 59% 36%;
   background-size: 47px;
+  width: 100%;
 }
 
 .newApp__wrapper {
-  display: table-cell;
   background-image: url(https://mcusercontent.com/6e30f56d8fc665b08934fa73c/images/802e912a-d91b-bf42-e796-4a141b9acbea.png);
   background-repeat: no-repeat;
   background-position: 59% 36%;
   background-size: 45px;
+  width: 100%;
+}
+
+.wrapper-inner {
+  padding-left: 15px;
+  text-align: center;
 }
 
 .appCard {
@@ -1749,6 +1768,8 @@ table.button table td {
   padding-bottom: 8px;
   padding-left: 8px;
   margin-bottom: 4px;
+  width: 150px;
+  height: 40px;
   border-radius: 12px;
   border: #DADADA 1px solid;
   -webkit-transition: 0.3s ease all;
@@ -1756,8 +1777,19 @@ table.button table td {
   transition: 0.3s ease all;
   cursor: pointer;
 }
+.appCard__wrapper {
+  width: 168px;
+  display: inline-block;
+  margin-right: 14px;
+}
 .appCard__img {
   border-radius: 8px;
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  margin-right: 9px;
 }
 .appCard__title, .appCard__descr {
   font-size: 10px;
@@ -1776,26 +1808,57 @@ table.button table td {
 .popular {
   display: table-cell;
   background: #2A1B68;
-  background: -o-radial-gradient(16.14% 21.32%, 61.47% 255.37%, rgba(0, 172, 238, 0.2) 0%, rgba(0, 0, 0, 0) 100%), -o-linear-gradient(0.03deg, #2C1A72 0.03%, #261667 99.97%);
-  background: radial-gradient(61.47% 255.37% at 16.14% 21.32%, rgba(0, 172, 238, 0.2) 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(89.97deg, #2C1A72 0.03%, #261667 99.97%);
   border-radius: 12px;
   padding-left: 26px;
   padding-right: 35px;
 }
+.popular .wrapper-inner {
+  padding-left: 0;
+}
+.popular__inner {
+  display: inline-block;
+  width: 100%;
+  max-width: 315px;
+}
+.popular__inner .wrapper-inner {
+  text-align: inherit;
+}
+.popular__img {
+  display: inline-block;
+  width: 33%;
+  min-width: 157px;
+  background-size: 75%;
+  background-repeat: no-repeat;
+  vertical-align: top;
+}
 .popular__title {
+  display: inline-block;
   color: #ffffff;
+  max-width: 200px;
+  margin-bottom: 4px;
 }
 .popular__version {
+  display: inline-block;
   color: #ffffff;
   text-align: right;
+  float: right;
+  margin-left: 10px;
+  margin-bottom: 8px;
 }
 .popular__descr {
-  color: #ffffff;
+  color: #C6F1FF;
+}
+@media (prefers-color-scheme: dark) {
+  .popular__descr {
+    color: #ffffff;
+  }
 }
 
 .footer__wrapper {
-  display: table-cell;
   background-color: #2A1B68;
+}
+.footer__wrapper > table {
+  width: 100%;
 }
 .footer__left {
   font-size: 10px;
@@ -1819,268 +1882,339 @@ table.button table td {
   </head>
   <body><span class="preheader"> </span>
     <table align="center" class="container"><tbody><tr><td>
-      <div class="mail_container header__wrapper">
-        <table class="row"><tbody><tr>
-          <th class="header small-12 large-12 columns first last"><table><tbody><tr><th>
-            <table class="spacer"><tbody><tr><td height="32" style="font-size:32px;line-height:32px;">&nbsp;</td></tr></tbody></table> 
-            <table class="row"><tbody><tr>
-              <th class="small-6 large-6 columns first"><table><tbody><tr><th><img src="https://mcusercontent.com/6e30f56d8fc665b08934fa73c/images/bcfbc30b-fb16-0e41-9005-23e317709480.png" alt="logo" width="101" height="17"></th></tr></tbody></table></th>
-              <th class="small-6 large-6 columns last"><table><tbody><tr><th>
-                <div class="social"><a href="#!" target="_blank"><img src="https://mcusercontent.com/6e30f56d8fc665b08934fa73c/images/13b84101-970d-c090-ec83-72c63fb76525.png" width="16" height="16"></a><a href="#!" target="_blank"><img src="https://mcusercontent.com/6e30f56d8fc665b08934fa73c/images/cfb2f7fe-8dfa-2d99-ec3a-d6403435169d.png" width="16" height="16"></a><a href="#!" target="_blank"><img src="https://mcusercontent.com/6e30f56d8fc665b08934fa73c/images/2dfd5737-5710-ceb6-54c1-2f3c3183f206.png" width="16" height="16"></a></div>
-              </th></tr></tbody></table></th>
-            </tr></tbody></table>
-            <table class="spacer"><tbody><tr><td height="19" style="font-size:19px;line-height:19px;">&nbsp;</td></tr></tbody></table> 
-            <table class="row"><tbody><tr>
-              <th class="small-12 large-12 columns first last"><table><tbody><tr><th>
-                <div class="header__subtitle">January 2023</div>
-              </th>
-<th class="expander"></th></tr></tbody></table></th>
-            </tr></tbody></table>
-            <table class="spacer"><tbody><tr><td height="7" style="font-size:7px;line-height:7px;">&nbsp;</td></tr></tbody></table> 
-            <table class="row"><tbody><tr>
-              <th class="header__title__wrapper small-12 large-12 columns first last"><table><tbody><tr><th>
-                <h1 class="header__title">Digest #1</h1>
-              </th>
-<th class="expander"></th></tr></tbody></table></th>
-            </tr></tbody></table>
-            <table class="row"><tbody><tr>
-              <th class="small-12 large-12 columns first last"><table><tbody><tr><th>
-                <div class="header__descr">Hey, BuildStore’s here with the latest and hottest updates of January!</div>
-              </th>
-<th class="expander"></th></tr></tbody></table></th>
-            </tr></tbody></table>
-          </th></tr></tbody></table></th>
-        </tr></tbody></table>
+      <div class="header__wrapper"><img src="https://mcusercontent.com/6e30f56d8fc665b08934fa73c/images/4d3de482-b871-b61b-34fa-7a9d12f0554d.jpeg">
+        <!--row-->
+        <!--	columns.header
+        //spacer(size=32)
+        //row
+        //	columns(small='6')
+        //		a(href= 'https://builds.io')
+        //			img(
+        //				src="https://mcusercontent.com/6e30f56d8fc665b08934fa73c/images/bcfbc30b-fb16-0e41-9005-23e317709480.png"
+        //				alt='logo'
+        //				width=101
+        //				height=17
+        //			)
+        //	columns(small='6')
+        //		include includes/social_list
+        
+        //spacer(size=19)
+        //row
+        //	columns
+        //		.header__subtitle= month
+        //spacer(size=7)
+        //row
+        //	columns.header__title__wrapper
+        //		h1.header__title Digest #
+        //			span= digestNumber
+        //row
+        //	columns
+        //		.header__descr= preText
+        
+        -->
       </div>
       <div class="mail_container">
         <table class="spacer"><tbody><tr><td height="32" style="font-size:32px;line-height:32px;">&nbsp;</td></tr></tbody></table> 
         <table class="row"><tbody><tr>
           <th class="small-12 large-12 columns first last"><table><tbody><tr><th>
             <div class="blueParagraph">
-              <h6>Dear, [Username]</h6>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua. Ut&nbsp;enim ad&nbsp;minim veniam, quis nostrud exercitation ullamco laboris nisi ut&nbsp;aliquip ex&nbsp;ea&nbsp;commodo consequat. Duis aute irure dolor in&nbsp;reprehenderit in&nbsp;voluptate velit esse cillum dolore eu&nbsp;fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in&nbsp;culpa qui officia deserunt mollit anim id&nbsp;est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua. Ut&nbsp;enim ad&nbsp;minim veniam</p>
+              <h6>Hey, [UserName]</h6>
+              <p>This winter BuildStore became better, more advanced, and more diverse. We gathered for you some exciting updates of the service over the past season. And there's more to come!</p>
             </div>
           </th>
 <th class="expander"></th></tr></tbody></table></th>
         </tr></tbody></table>
-        <table class="spacer"><tbody><tr><td height="28" style="font-size:28px;line-height:28px;">&nbsp;</td></tr></tbody></table> 
+        <!--spacer(size=28)-->
+        <!--row-->
+        <!--	columns-->
+        <!--		h5.text-center Top news!-->
+        <!---->
+        <!--row-->
+        <!--	columns-->
+        <!--		.blueParagraph-->
+        <!--			h6 BuildStore now supports iPhone 18!-->
+        <!--			p We&nbsp;worked so&nbsp;hard to&nbsp;update the system, and now you can finally enjoy&nbsp;it!-->
+        <!---->
+        <!--spacer(size='4')-->
+        <!--row-->
+        <!--	columns-->
+        <!--		.blueParagraph-->
+        <!--			h6 BuildStore now supports iPhone 18!-->
+        <!--			p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.-->
+        <table class="appUpdates__wrapper">
+          <tr>
+            <td>
+              <table class="spacer"><tbody><tr><td height="28" style="font-size:28px;line-height:28px;">&nbsp;</td></tr></tbody></table> 
+              <table class="row"><tbody><tr>
+                <th class="small-12 large-12 columns first last"><table><tbody><tr><th>
+                  <h5 class="text-center">Apps Updates</h5>
+                </th>
+<th class="expander"></th></tr></tbody></table></th>
+              </tr></tbody></table>
+            </td>
+          </tr>
+        </table>
+        <table class="wrapper" align="center"><tbody><tr><td class="wrapper-inner">
+          <div class="appCard__wrapper"><a class="appCard" href="https://builds.io/apps/concordiaoriginalapp/">
+                      <table>
+                        <tr>
+                          <td><img class="appCard__img" src="https://s3.amazonaws.com/cdn.builds.io/cache/e7/42/e7420c3d4794c67497d517a9c696086d.jpg" alt="Concordia - Digital Edition" width="40" height="40"></td>
+                          <td style="vertical-align: middle">
+                            <div class="appCard__title">Concordia - Digital Edition</div>
+                            <div class="appCard__descr">Version<span>1.3.1</span></div>
+                          </td>
+                        </tr>
+                      </table></a>
+          </div>
+          <div class="appCard__wrapper"><a class="appCard" href="https://builds.io/apps/tinybangstory/">
+                      <table>
+                        <tr>
+                          <td><img class="appCard__img" src="https://s3.amazonaws.com/cdn.builds.io/cache/fa/9e/fa9e15e2781643b04c14c9e7ed56dd8d.jpg" alt="The Tiny Bang Story" width="40" height="40"></td>
+                          <td style="vertical-align: middle">
+                            <div class="appCard__title">The Tiny Bang Story</div>
+                            <div class="appCard__descr">Version<span>3.5</span></div>
+                          </td>
+                        </tr>
+                      </table></a>
+          </div>
+          <div class="appCard__wrapper"><a class="appCard" href="https://builds.io/apps/rockettest/">
+                      <table>
+                        <tr>
+                          <td><img class="appCard__img" src="https://s3.amazonaws.com/cdn.builds.io/cache/9c/b6/9cb6e248a4cbb639bcee59adb0044b3c.jpg" alt="Instagram Rocket" width="40" height="40"></td>
+                          <td style="vertical-align: middle">
+                            <div class="appCard__title">Instagram Rocket</div>
+                            <div class="appCard__descr">Version<span>271.1</span></div>
+                          </td>
+                        </tr>
+                      </table></a>
+          </div>
+          <div class="appCard__wrapper"><a class="appCard" href="https://builds.io/apps/watusi/">
+                      <table>
+                        <tr>
+                          <td><img class="appCard__img" src="https://s3.amazonaws.com/cdn.builds.io/cache/c0/c7/c0c78871baeb7fc4818803af02fa3606.jpg" alt="WhatsApp Watusi" width="40" height="40"></td>
+                          <td style="vertical-align: middle">
+                            <div class="appCard__title">WhatsApp Watusi</div>
+                            <div class="appCard__descr">Version<span>23.2.75</span></div>
+                          </td>
+                        </tr>
+                      </table></a>
+          </div>
+          <div class="appCard__wrapper"><a class="appCard" href="https://builds.io/apps/movieboxpronoads/">
+                      <table>
+                        <tr>
+                          <td><img class="appCard__img" src="https://s3.amazonaws.com/cdn.builds.io/cache/a0/c0/a0c0890f77f6b35c9fa8edf75da25f4e.jpg" alt="MovieBoxPro (NoAds)" width="40" height="40"></td>
+                          <td style="vertical-align: middle">
+                            <div class="appCard__title">MovieBoxPro (NoAds)</div>
+                            <div class="appCard__descr">Version<span>12.0</span></div>
+                          </td>
+                        </tr>
+                      </table></a>
+          </div>
+          <div class="appCard__wrapper"><a class="appCard" href="https://builds.io/apps/procreateipad/">
+                      <table>
+                        <tr>
+                          <td><img class="appCard__img" src="https://s3.amazonaws.com/cdn.builds.io/cache/cc/f5/ccf58b0b65454b98ad3fbc7e1edc533a.jpg" alt="Procreate for iPad" width="40" height="40"></td>
+                          <td style="vertical-align: middle">
+                            <div class="appCard__title">Procreate for iPad</div>
+                            <div class="appCard__descr">Version<span>5.3.3</span></div>
+                          </td>
+                        </tr>
+                      </table></a>
+          </div>
+          <div class="appCard__wrapper"><a class="appCard" href="https://builds.io/apps/harrypotter/">
+                      <table>
+                        <tr>
+                          <td><img class="appCard__img" src="https://s3.amazonaws.com/cdn.builds.io/cache/3a/53/3a53ff58ebb4564fecdfca0d82206987.jpg" alt="Harry Potter: Hogwarts Mystery Energy Hack" width="40" height="40"></td>
+                          <td style="vertical-align: middle">
+                            <div class="appCard__title">Harry Potter: Hogwarts Mystery Energy Hack</div>
+                            <div class="appCard__descr">Version<span>4.8.1</span></div>
+                          </td>
+                        </tr>
+                      </table></a>
+          </div>
+          <div class="appCard__wrapper"><a class="appCard" href="https://builds.io/apps/elderscrolls/">
+                      <table>
+                        <tr>
+                          <td><img class="appCard__img" src="https://s3.amazonaws.com/cdn.builds.io/cache/cb/f2/cbf2e6d782ec63616b799edf1481796b.jpg" alt="The Elder Scrolls: Blades Hack" width="40" height="40"></td>
+                          <td style="vertical-align: middle">
+                            <div class="appCard__title">The Elder Scrolls: Blades Hack</div>
+                            <div class="appCard__descr">Version<span>1.30</span></div>
+                          </td>
+                        </tr>
+                      </table></a>
+          </div>
+          <div class="appCard__wrapper"><a class="appCard" href="https://builds.io/apps/youtubemusicpremium/">
+                      <table>
+                        <tr>
+                          <td><img class="appCard__img" src="https://s3.amazonaws.com/cdn.builds.io/cache/47/dc/47dcd1b5929bbf69f0038cd0ebdd1fe4.jpg" alt="YouTube Music Premium" width="40" height="40"></td>
+                          <td style="vertical-align: middle">
+                            <div class="appCard__title">YouTube Music Premium</div>
+                            <div class="appCard__descr">Version<span>5.45.1</span></div>
+                          </td>
+                        </tr>
+                      </table></a>
+          </div>
+          <div class="appCard__wrapper"><a class="appCard" href="https://builds.io/apps/jurassicworld/">
+                      <table>
+                        <tr>
+                          <td><img class="appCard__img" src="https://s3.amazonaws.com/cdn.builds.io/cache/03/67/03675d9da3a4591d5818bd33e649ac30.jpg" alt="Jurassic World ++" width="40" height="40"></td>
+                          <td style="vertical-align: middle">
+                            <div class="appCard__title">Jurassic World ++</div>
+                            <div class="appCard__descr">Version<span>2.21.32</span></div>
+                          </td>
+                        </tr>
+                      </table></a>
+          </div>
+          <div class="appCard__wrapper"><a class="appCard" href="https://builds.io/apps/needspeednolimitsfh/">
+                      <table>
+                        <tr>
+                          <td><img class="appCard__img" src="https://s3.amazonaws.com/cdn.builds.io/cache/b8/1a/b81a95fbeaeb53b08447c7f25bdcc4a6.jpg" alt="Need for Speed No Limits - Free Hack" width="40" height="40"></td>
+                          <td style="vertical-align: middle">
+                            <div class="appCard__title">Need for Speed No Limits - Free Hack</div>
+                            <div class="appCard__descr">Version<span>6.6.11</span></div>
+                          </td>
+                        </tr>
+                      </table></a>
+          </div>
+          <div class="appCard__wrapper"><a class="appCard" href="https://builds.io/apps/minecraft/">
+                      <table>
+                        <tr>
+                          <td><img class="appCard__img" src="https://s3.amazonaws.com/cdn.builds.io/cache/d1/d0/d1d0f7fba15a8e25e66d07cd3e3824b1.jpg" alt="Minecraft" width="40" height="40"></td>
+                          <td style="vertical-align: middle">
+                            <div class="appCard__title">Minecraft</div>
+                            <div class="appCard__descr">Version<span>1.19.63</span></div>
+                          </td>
+                        </tr>
+                      </table></a>
+          </div>
+        </td></tr></tbody></table>
+        <table class="spacer"><tbody><tr><td height="26" style="font-size:26px;line-height:26px;">&nbsp;</td></tr></tbody></table> 
         <table class="row"><tbody><tr>
           <th class="small-12 large-12 columns first last"><table><tbody><tr><th>
-            <h5 class="text-center">Top news!</h5>
+            <center><a class="img_button float-center" href="http://bit.ly/3INrmpz" align="center"><img class="img_button" src="https://mcusercontent.com/6e30f56d8fc665b08934fa73c/images/6fe15517-5117-c915-48ad-008779407549.png" width="214" height="48"></a></center>
           </th>
 <th class="expander"></th></tr></tbody></table></th>
         </tr></tbody></table>
+        <table class="newApp__wrapper">
+          <tr>
+            <td>
+              <table class="spacer"><tbody><tr><td height="22" style="font-size:22px;line-height:22px;">&nbsp;</td></tr></tbody></table> 
+              <table class="row"><tbody><tr>
+                <th class="small-12 large-12 columns first last"><table><tbody><tr><th>
+                  <h5 class="text-center">New Apps</h5>
+                </th>
+<th class="expander"></th></tr></tbody></table></th>
+              </tr></tbody></table>
+            </td>
+          </tr>
+        </table>
+        <table class="wrapper" align="center"><tbody><tr><td class="wrapper-inner">
+          <div class="appCard__wrapper"><a class="appCard" href="https://builds.io/apps/43bb1e96-ae6f-4061-bc12-274897966dad/">
+                      <table>
+                        <tr>
+                          <td><img class="appCard__img" src="https://s3.amazonaws.com/cdn.builds.io/cache/7b/30/7b302aeef3927e0a5f4732ba57f4ef79.jpg" alt="LEGO® Star Wars™: TCS Hack" width="40" height="40"></td>
+                          <td style="vertical-align: middle">
+                            <div class="appCard__title">LEGO® Star Wars™: TCS Hack</div>
+                            <div class="appCard__descr">Version<span>2.2.0</span></div>
+                          </td>
+                        </tr>
+                      </table></a>
+          </div>
+          <div class="appCard__wrapper"><a class="appCard" href="https://builds.io/apps/0090829c-33aa-4aa3-85d7-06e92898ac38/">
+                      <table>
+                        <tr>
+                          <td><img class="appCard__img" src="https://s3.amazonaws.com/cdn.builds.io/cache/ae/83/ae83f5a27b9788c2e5b57dd1415348ef.jpg" alt="DOOM" width="40" height="40"></td>
+                          <td style="vertical-align: middle">
+                            <div class="appCard__title">DOOM</div>
+                            <div class="appCard__descr">Version<span>2.9.6</span></div>
+                          </td>
+                        </tr>
+                      </table></a>
+          </div>
+          <div class="appCard__wrapper"><a class="appCard" href="https://builds.io/apps/d38a86f9-070e-4dcf-a238-50db2f32ed1a/">
+                      <table>
+                        <tr>
+                          <td><img class="appCard__img" src="https://s3.amazonaws.com/cdn.builds.io/cache/d8/3a/d83abd823cdef940127a2507f9aeca3d.jpg" alt="Real Driving Sim Hack" width="40" height="40"></td>
+                          <td style="vertical-align: middle">
+                            <div class="appCard__title">Real Driving Sim Hack</div>
+                            <div class="appCard__descr">Version<span>3.7</span></div>
+                          </td>
+                        </tr>
+                      </table></a>
+          </div>
+          <div class="appCard__wrapper"><a class="appCard" href="https://builds.io/apps/ebd869ad-dcd4-4ff8-a28b-0ce996098ff1/">
+                      <table>
+                        <tr>
+                          <td><img class="appCard__img" src="https://s3.amazonaws.com/cdn.builds.io/cache/88/32/8832cee8a21102c777248dbb6631720a.jpg" alt="Street Fighter IV CE" width="40" height="40"></td>
+                          <td style="vertical-align: middle">
+                            <div class="appCard__title">Street Fighter IV CE</div>
+                            <div class="appCard__descr">Version<span>1.06.03</span></div>
+                          </td>
+                        </tr>
+                      </table></a>
+          </div>
+          <div class="appCard__wrapper"><a class="appCard" href="https://builds.io/apps/57e03fba-a49e-45cd-b52d-18f199f19854/">
+                      <table>
+                        <tr>
+                          <td><img class="appCard__img" src="https://s3.amazonaws.com/cdn.builds.io/cache/8f/4b/8f4b91d0c36d676c3d3b24adc9e2f5eb.jpg" alt="Infinite Flight Simulator" width="40" height="40"></td>
+                          <td style="vertical-align: middle">
+                            <div class="appCard__title">Infinite Flight Simulator</div>
+                            <div class="appCard__descr">Version<span>22.8</span></div>
+                          </td>
+                        </tr>
+                      </table></a>
+          </div>
+          <div class="appCard__wrapper"><a class="appCard" href="https://builds.io/apps/ce88cf1f-cbf1-4d3f-8f20-762a65e22f91/">
+                      <table>
+                        <tr>
+                          <td><img class="appCard__img" src="https://s3.amazonaws.com/cdn.builds.io/cache/42/a4/42a463e2a4180f61c70eaebbdc63e07f.jpg" alt="Infinity Blade II" width="40" height="40"></td>
+                          <td style="vertical-align: middle">
+                            <div class="appCard__title">Infinity Blade II</div>
+                            <div class="appCard__descr">Version<span>1.3.5</span></div>
+                          </td>
+                        </tr>
+                      </table></a>
+          </div>
+          <div class="appCard__wrapper"><a class="appCard" href="https://builds.io/apps/0110b2df-e8a8-4fce-9b30-1cd015207e44/">
+                      <table>
+                        <tr>
+                          <td><img class="appCard__img" src="https://s3.amazonaws.com/cdn.builds.io/cache/9a/77/9a7727507cf66fff21a013f1faa1d114.jpg" alt="Alien: Isolation" width="40" height="40"></td>
+                          <td style="vertical-align: middle">
+                            <div class="appCard__title">Alien: Isolation</div>
+                            <div class="appCard__descr">Version<span>1.2.4</span></div>
+                          </td>
+                        </tr>
+                      </table></a>
+          </div>
+          <div class="appCard__wrapper"><a class="appCard" href="https://builds.io/apps/82f0c72e-7bec-4c31-937e-91c2d29a2b1c/">
+                      <table>
+                        <tr>
+                          <td><img class="appCard__img" src="https://s3.amazonaws.com/cdn.builds.io/cache/8d/71/8d71ad47c84450fba2603fea61d22b85.jpg" alt="Tonality: Music Theory" width="40" height="40"></td>
+                          <td style="vertical-align: middle">
+                            <div class="appCard__title">Tonality: Music Theory</div>
+                            <div class="appCard__descr">Version<span>10.1</span></div>
+                          </td>
+                        </tr>
+                      </table></a>
+          </div>
+          <div class="appCard__wrapper"><a class="appCard" href="https://builds.io/apps/78f56bcb-3a49-49a4-a499-f36dec3b7e70/">
+                      <table>
+                        <tr>
+                          <td><img class="appCard__img" src="https://s3.amazonaws.com/cdn.builds.io/cache/1a/93/1a93e2dfb7e249286184571e910faea4.jpg" alt="DRAGON QUEST VI" width="40" height="40"></td>
+                          <td style="vertical-align: middle">
+                            <div class="appCard__title">DRAGON QUEST VI</div>
+                            <div class="appCard__descr">Version<span>1.1.0</span></div>
+                          </td>
+                        </tr>
+                      </table></a>
+          </div>
+        </td></tr></tbody></table>
+        <table class="spacer"><tbody><tr><td height="26" style="font-size:26px;line-height:26px;">&nbsp;</td></tr></tbody></table> 
         <table class="row"><tbody><tr>
           <th class="small-12 large-12 columns first last"><table><tbody><tr><th>
-            <div class="blueParagraph">
-              <h6>BuildStore now supports iPhone 18!</h6>
-              <p>We&nbsp;worked so&nbsp;hard to&nbsp;update the system, and now you can finally enjoy&nbsp;it!</p>
-            </div>
+            <center><a class="img_button float-center" href="http://bit.ly/3INrmpz" align="center"><img class="img_button" src="https://mcusercontent.com/6e30f56d8fc665b08934fa73c/images/183083e1-8dc7-05fa-75ac-ce5dfc2d7a76.png" width="214" height="48"></a></center>
           </th>
 <th class="expander"></th></tr></tbody></table></th>
-        </tr></tbody></table>
-        <table class="spacer"><tbody><tr><td height="4" style="font-size:4px;line-height:4px;">&nbsp;</td></tr></tbody></table> 
-        <table class="row"><tbody><tr>
-          <th class="small-12 large-12 columns first last"><table><tbody><tr><th>
-            <div class="blueParagraph">
-              <h6>BuildStore now supports iPhone 18!</h6>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-          </th>
-<th class="expander"></th></tr></tbody></table></th>
-        </tr></tbody></table>
-        <div class="appUpdates__wrapper">
-          <table class="spacer"><tbody><tr><td height="28" style="font-size:28px;line-height:28px;">&nbsp;</td></tr></tbody></table> 
-          <table class="row"><tbody><tr>
-            <th class="small-12 large-12 columns first last"><table><tbody><tr><th>
-              <h5 class="text-center">Apps Updates</h5>
-            </th>
-<th class="expander"></th></tr></tbody></table></th>
-          </tr></tbody></table>
-        </div>
-        <table class="row"><tbody><tr>
-          <th class="small-4 large-4 columns first"><table><tbody><tr><th>
-            <div class="appCard">
-              <table class="row"><tbody><tr>
-                <th class="pb-0 small-5 large-5 columns first"><table><tbody><tr><th><img class="appCard__img" src="https://s3.amazonaws.com/cdn.builds.io/cache/01/39/0139303c5e6058d8cf10a9e9e7d494ad@2x.jpg" alt="Movie Box No Ads" width="40" height="40"></th></tr></tbody></table></th>
-                <th class="pb-0 small-7 large-7 columns last" valign="middle"><table><tbody><tr><th>
-                  <div class="appCard__title">Art of War:<br>Legions Hack</div>
-                  <div class="appCard__descr">Version 2.3.54</div>
-                </th></tr></tbody></table></th>
-              </tr></tbody></table>
-            </div>
-          </th></tr></tbody></table></th>
-          <th class="small-4 large-4 columns"><table><tbody><tr><th>
-            <div class="appCard">
-              <table class="row"><tbody><tr>
-                <th class="pb-0 small-5 large-5 columns first"><table><tbody><tr><th><img class="appCard__img" src="https://s3.amazonaws.com/cdn.builds.io/cache/01/39/0139303c5e6058d8cf10a9e9e7d494ad@2x.jpg" alt="Movie Box No Ads" width="40" height="40"></th></tr></tbody></table></th>
-                <th class="pb-0 small-7 large-7 columns last" valign="middle"><table><tbody><tr><th>
-                  <div class="appCard__title">Art of War:<br>Legions Hack</div>
-                  <div class="appCard__descr">Version 2.3.54</div>
-                </th></tr></tbody></table></th>
-              </tr></tbody></table>
-            </div>
-          </th></tr></tbody></table></th>
-          <th class="small-4 large-4 columns last"><table><tbody><tr><th>
-            <div class="appCard">
-              <table class="row"><tbody><tr>
-                <th class="pb-0 small-5 large-5 columns first"><table><tbody><tr><th><img class="appCard__img" src="https://s3.amazonaws.com/cdn.builds.io/cache/01/39/0139303c5e6058d8cf10a9e9e7d494ad@2x.jpg" alt="Movie Box No Ads" width="40" height="40"></th></tr></tbody></table></th>
-                <th class="pb-0 small-7 large-7 columns last" valign="middle"><table><tbody><tr><th>
-                  <div class="appCard__title">Art of War:<br>Legions Hack</div>
-                  <div class="appCard__descr">Version 2.3.54</div>
-                </th></tr></tbody></table></th>
-              </tr></tbody></table>
-            </div>
-          </th></tr></tbody></table></th>
-        </tr></tbody></table>
-        <table class="row"><tbody><tr>
-          <th class="small-4 large-4 columns first"><table><tbody><tr><th>
-            <div class="appCard">
-              <table class="row"><tbody><tr>
-                <th class="pb-0 small-5 large-5 columns first"><table><tbody><tr><th><img class="appCard__img" src="https://s3.amazonaws.com/cdn.builds.io/cache/01/39/0139303c5e6058d8cf10a9e9e7d494ad@2x.jpg" alt="Movie Box No Ads" width="40" height="40"></th></tr></tbody></table></th>
-                <th class="pb-0 small-7 large-7 columns last" valign="middle"><table><tbody><tr><th>
-                  <div class="appCard__title">Art of War:<br>Legions Hack</div>
-                  <div class="appCard__descr">Version 2.3.54</div>
-                </th></tr></tbody></table></th>
-              </tr></tbody></table>
-            </div>
-          </th></tr></tbody></table></th>
-          <th class="small-4 large-4 columns"><table><tbody><tr><th>
-            <div class="appCard">
-              <table class="row"><tbody><tr>
-                <th class="pb-0 small-5 large-5 columns first"><table><tbody><tr><th><img class="appCard__img" src="https://s3.amazonaws.com/cdn.builds.io/cache/01/39/0139303c5e6058d8cf10a9e9e7d494ad@2x.jpg" alt="Movie Box No Ads" width="40" height="40"></th></tr></tbody></table></th>
-                <th class="pb-0 small-7 large-7 columns last" valign="middle"><table><tbody><tr><th>
-                  <div class="appCard__title">Art of War:<br>Legions Hack</div>
-                  <div class="appCard__descr">Version 2.3.54</div>
-                </th></tr></tbody></table></th>
-              </tr></tbody></table>
-            </div>
-          </th></tr></tbody></table></th>
-          <th class="small-4 large-4 columns last"><table><tbody><tr><th>
-            <div class="appCard">
-              <table class="row"><tbody><tr>
-                <th class="pb-0 small-5 large-5 columns first"><table><tbody><tr><th><img class="appCard__img" src="https://s3.amazonaws.com/cdn.builds.io/cache/01/39/0139303c5e6058d8cf10a9e9e7d494ad@2x.jpg" alt="Movie Box No Ads" width="40" height="40"></th></tr></tbody></table></th>
-                <th class="pb-0 small-7 large-7 columns last" valign="middle"><table><tbody><tr><th>
-                  <div class="appCard__title">Art of War:<br>Legions Hack</div>
-                  <div class="appCard__descr">Version 2.3.54</div>
-                </th></tr></tbody></table></th>
-              </tr></tbody></table>
-            </div>
-          </th></tr></tbody></table></th>
-        </tr></tbody></table>
-        <table class="row"><tbody><tr>
-          <th class="small-4 large-4 columns first"><table><tbody><tr><th>
-            <div class="appCard">
-              <table class="row"><tbody><tr>
-                <th class="pb-0 small-5 large-5 columns first"><table><tbody><tr><th><img class="appCard__img" src="https://s3.amazonaws.com/cdn.builds.io/cache/01/39/0139303c5e6058d8cf10a9e9e7d494ad@2x.jpg" alt="Movie Box No Ads" width="40" height="40"></th></tr></tbody></table></th>
-                <th class="pb-0 small-7 large-7 columns last" valign="middle"><table><tbody><tr><th>
-                  <div class="appCard__title">Art of War:<br>Legions Hack</div>
-                  <div class="appCard__descr">Version 2.3.54</div>
-                </th></tr></tbody></table></th>
-              </tr></tbody></table>
-            </div>
-          </th></tr></tbody></table></th>
-          <th class="small-4 large-4 columns"><table><tbody><tr><th>
-            <div class="appCard">
-              <table class="row"><tbody><tr>
-                <th class="pb-0 small-5 large-5 columns first"><table><tbody><tr><th><img class="appCard__img" src="https://s3.amazonaws.com/cdn.builds.io/cache/01/39/0139303c5e6058d8cf10a9e9e7d494ad@2x.jpg" alt="Movie Box No Ads" width="40" height="40"></th></tr></tbody></table></th>
-                <th class="pb-0 small-7 large-7 columns last" valign="middle"><table><tbody><tr><th>
-                  <div class="appCard__title">Art of War:<br>Legions Hack</div>
-                  <div class="appCard__descr">Version 2.3.54</div>
-                </th></tr></tbody></table></th>
-              </tr></tbody></table>
-            </div>
-          </th></tr></tbody></table></th>
-          <th class="small-4 large-4 columns last"><table><tbody><tr><th>
-            <div class="appCard">
-              <table class="row"><tbody><tr>
-                <th class="pb-0 small-5 large-5 columns first"><table><tbody><tr><th><img class="appCard__img" src="https://s3.amazonaws.com/cdn.builds.io/cache/01/39/0139303c5e6058d8cf10a9e9e7d494ad@2x.jpg" alt="Movie Box No Ads" width="40" height="40"></th></tr></tbody></table></th>
-                <th class="pb-0 small-7 large-7 columns last" valign="middle"><table><tbody><tr><th>
-                  <div class="appCard__title">Art of War:<br>Legions Hack</div>
-                  <div class="appCard__descr">Version 2.3.54</div>
-                </th></tr></tbody></table></th>
-              </tr></tbody></table>
-            </div>
-          </th></tr></tbody></table></th>
-        </tr></tbody></table>
-        <div class="newApp__wrapper">
-          <table class="spacer"><tbody><tr><td height="22" style="font-size:22px;line-height:22px;">&nbsp;</td></tr></tbody></table> 
-          <table class="row"><tbody><tr>
-            <th class="small-12 large-12 columns first last"><table><tbody><tr><th>
-              <h5 class="text-center">New Apps</h5>
-            </th>
-<th class="expander"></th></tr></tbody></table></th>
-          </tr></tbody></table>
-        </div>
-        <table class="row"><tbody><tr>
-          <th class="small-4 large-4 columns first"><table><tbody><tr><th>
-            <div class="appCard">
-              <table class="row"><tbody><tr>
-                <th class="pb-0 small-5 large-5 columns first"><table><tbody><tr><th><img class="appCard__img" src="https://s3.amazonaws.com/cdn.builds.io/cache/01/39/0139303c5e6058d8cf10a9e9e7d494ad@2x.jpg" alt="Movie Box No Ads" width="40" height="40"></th></tr></tbody></table></th>
-                <th class="pb-0 small-7 large-7 columns last" valign="middle"><table><tbody><tr><th>
-                  <div class="appCard__title">Art of War:<br>Legions Hack</div>
-                  <div class="appCard__descr">Version 2.3.54</div>
-                </th></tr></tbody></table></th>
-              </tr></tbody></table>
-            </div>
-          </th></tr></tbody></table></th>
-          <th class="small-4 large-4 columns"><table><tbody><tr><th>
-            <div class="appCard">
-              <table class="row"><tbody><tr>
-                <th class="pb-0 small-5 large-5 columns first"><table><tbody><tr><th><img class="appCard__img" src="https://s3.amazonaws.com/cdn.builds.io/cache/01/39/0139303c5e6058d8cf10a9e9e7d494ad@2x.jpg" alt="Movie Box No Ads" width="40" height="40"></th></tr></tbody></table></th>
-                <th class="pb-0 small-7 large-7 columns last" valign="middle"><table><tbody><tr><th>
-                  <div class="appCard__title">Art of War:<br>Legions Hack</div>
-                  <div class="appCard__descr">Version 2.3.54</div>
-                </th></tr></tbody></table></th>
-              </tr></tbody></table>
-            </div>
-          </th></tr></tbody></table></th>
-          <th class="small-4 large-4 columns last"><table><tbody><tr><th>
-            <div class="appCard">
-              <table class="row"><tbody><tr>
-                <th class="pb-0 small-5 large-5 columns first"><table><tbody><tr><th><img class="appCard__img" src="https://s3.amazonaws.com/cdn.builds.io/cache/01/39/0139303c5e6058d8cf10a9e9e7d494ad@2x.jpg" alt="Movie Box No Ads" width="40" height="40"></th></tr></tbody></table></th>
-                <th class="pb-0 small-7 large-7 columns last" valign="middle"><table><tbody><tr><th>
-                  <div class="appCard__title">Art of War:<br>Legions Hack</div>
-                  <div class="appCard__descr">Version 2.3.54</div>
-                </th></tr></tbody></table></th>
-              </tr></tbody></table>
-            </div>
-          </th></tr></tbody></table></th>
-        </tr></tbody></table>
-        <table class="row"><tbody><tr>
-          <th class="small-4 large-4 columns first"><table><tbody><tr><th>
-            <div class="appCard">
-              <table class="row"><tbody><tr>
-                <th class="pb-0 small-5 large-5 columns first"><table><tbody><tr><th><img class="appCard__img" src="https://s3.amazonaws.com/cdn.builds.io/cache/01/39/0139303c5e6058d8cf10a9e9e7d494ad@2x.jpg" alt="Movie Box No Ads" width="40" height="40"></th></tr></tbody></table></th>
-                <th class="pb-0 small-7 large-7 columns last" valign="middle"><table><tbody><tr><th>
-                  <div class="appCard__title">Art of War:<br>Legions Hack</div>
-                  <div class="appCard__descr">Version 2.3.54</div>
-                </th></tr></tbody></table></th>
-              </tr></tbody></table>
-            </div>
-          </th></tr></tbody></table></th>
-          <th class="small-4 large-4 columns"><table><tbody><tr><th>
-            <div class="appCard">
-              <table class="row"><tbody><tr>
-                <th class="pb-0 small-5 large-5 columns first"><table><tbody><tr><th><img class="appCard__img" src="https://s3.amazonaws.com/cdn.builds.io/cache/01/39/0139303c5e6058d8cf10a9e9e7d494ad@2x.jpg" alt="Movie Box No Ads" width="40" height="40"></th></tr></tbody></table></th>
-                <th class="pb-0 small-7 large-7 columns last" valign="middle"><table><tbody><tr><th>
-                  <div class="appCard__title">Art of War:<br>Legions Hack</div>
-                  <div class="appCard__descr">Version 2.3.54</div>
-                </th></tr></tbody></table></th>
-              </tr></tbody></table>
-            </div>
-          </th></tr></tbody></table></th>
-          <th class="small-4 large-4 columns last"><table><tbody><tr><th>
-            <div class="appCard">
-              <table class="row"><tbody><tr>
-                <th class="pb-0 small-5 large-5 columns first"><table><tbody><tr><th><img class="appCard__img" src="https://s3.amazonaws.com/cdn.builds.io/cache/01/39/0139303c5e6058d8cf10a9e9e7d494ad@2x.jpg" alt="Movie Box No Ads" width="40" height="40"></th></tr></tbody></table></th>
-                <th class="pb-0 small-7 large-7 columns last" valign="middle"><table><tbody><tr><th>
-                  <div class="appCard__title">Art of War:<br>Legions Hack</div>
-                  <div class="appCard__descr">Version 2.3.54</div>
-                </th></tr></tbody></table></th>
-              </tr></tbody></table>
-            </div>
-          </th></tr></tbody></table></th>
         </tr></tbody></table>
         <table class="spacer"><tbody><tr><td height="24" style="font-size:24px;line-height:24px;">&nbsp;</td></tr></tbody></table> 
         <table class="row"><tbody><tr>
@@ -2091,68 +2225,65 @@ table.button table td {
         </tr></tbody></table>
         <table class="spacer"><tbody><tr><td height="2" style="font-size:2px;line-height:2px;">&nbsp;</td></tr></tbody></table> 
         <table class="row"><tbody><tr>
-          <th class="small-12 large-12 columns first last"><table><tbody><tr><th>
-            <div class="popular">
-              <table class="row"><tbody><tr>
-                <th class="pb-0 small-4 large-4 columns first" valign="bottom"><table><tbody><tr><th><img class="popular__img" src="https://mcusercontent.com/6e30f56d8fc665b08934fa73c/images/d37daa26-ca02-4a11-f028-657ba896c156.png" width="120" height="107"></th></tr></tbody></table></th>
-                <th class="pb-0 small-8 large-8 columns last" valign="middle"><table><tbody><tr><th>
-                  <table class="spacer"><tbody><tr><td height="30" style="font-size:30px;line-height:30px;">&nbsp;</td></tr></tbody></table> 
-                  <table class="row"><tbody><tr>
-                    <th class="pb-0 small-8 large-8 columns first"><table><tbody><tr><th>
-                      <h6 class="popular__title">AngryBird Exclusive Version</h6>
-                    </th></tr></tbody></table></th>
-                    <th class="small-4 large-4 columns last"><table><tbody><tr><th>
-                      <div class="popular__version">Version 3.21</div>
-                    </th></tr></tbody></table></th>
-                  </tr></tbody></table>
+          <th class="small-12 large-12 columns first last"><table><tbody><tr><th><a class="popular" href="https://builds.io/apps/d1f7a521-da2c-48f4-9b20-89f332563151/">
+              <table class="spacer"><tbody><tr><td height="30" style="font-size:30px;line-height:30px;">&nbsp;</td></tr></tbody></table> 
+              <table class="wrapper" align="center"><tbody><tr><td class="wrapper-inner">
+                <div class="popular__img" style="background-image: url(https://mcusercontent.com/6e30f56d8fc665b08934fa73c/images/d16d9221-a5e8-9f2a-c7df-b39570a4198c.png)">&nbsp;</div>
+                <div class="popular__inner">
+                  <table class="wrapper" align="center"><tbody><tr><td class="wrapper-inner">
+                    <h6 class="popular__title">Hero Wars - Fantasy World Hack</h6>
+                    <div class="popular__version">Version&nbsp;<span>1.163.001</span></div>
+                  </td></tr></tbody></table>
                   <table class="row"><tbody><tr>
                     <th class="pb-0 small-12 large-12 columns first last"><table><tbody><tr><th>
-                      <p class="popular__descr">A long time ago in a galaxy far, far away... a group of desperate rebel birds faced off against a galactic menace: the Empire’s evil Pigtroopers!</p>
+                      <p class="popular__descr">Welcome at long last, Brave Hero! Whether you’ve come to relive your favorite moments of online-RPG gaming or are just looking to slash your way through a few levels, Hero Wars has you covered. Come for the refined RPG gameplay, stay for the glory!</p>
                     </th>
 <th class="expander"></th></tr></tbody></table></th>
                   </tr></tbody></table>
-                  <table class="spacer"><tbody><tr><td height="6" style="font-size:6px;line-height:6px;">&nbsp;</td></tr></tbody></table> 
-                </th></tr></tbody></table></th>
-              </tr></tbody></table>
-            </div>
-          </th></tr></tbody></table></th>
+                  <table class="spacer"><tbody><tr><td height="20" style="font-size:20px;line-height:20px;">&nbsp;</td></tr></tbody></table> 
+                </div>
+              </td></tr></tbody></table></a></th></tr></tbody></table></th>
         </tr></tbody></table>
         <table class="spacer"><tbody><tr><td height="29" style="font-size:29px;line-height:29px;">&nbsp;</td></tr></tbody></table> 
         <table class="row"><tbody><tr>
           <th class="small-12 large-12 columns first last"><table><tbody><tr><th>
-            <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            <p class="text-center">That's it for this time. And while we're preparing a new roundup for you, enjoy your BuildStore!</p>
           </th>
 <th class="expander"></th></tr></tbody></table></th>
         </tr></tbody></table>
         <table class="spacer"><tbody><tr><td height="21" style="font-size:21px;line-height:21px;">&nbsp;</td></tr></tbody></table> 
         <table class="row"><tbody><tr>
           <th class="small-12 large-12 columns first last"><table><tbody><tr><th>
-            <center>
-              <table class="button float-center"><tbody><tr><td><table><tbody><tr><td><a class="button large" href="#">GO TO BUILDSTORE</a></td></tr></tbody></table></td></tr></tbody></table>
-            </center>
+            <center><a class="img_button float-center" href="http://bit.ly/3INrmpz" align="center"><img class="img_button" src="https://mcusercontent.com/6e30f56d8fc665b08934fa73c/images/6169399f-52c5-c2df-9279-1171b9cd8fae.png" width="214" height="48"></a></center>
           </th>
 <th class="expander"></th></tr></tbody></table></th>
         </tr></tbody></table>
         <table class="spacer"><tbody><tr><td height="13" style="font-size:13px;line-height:13px;">&nbsp;</td></tr></tbody></table> 
         <table class="row"><tbody><tr>
           <th class="small-12 large-12 columns first last"><table><tbody><tr><th>
-            <p class="text-center">Best, BuildStore Team</p>
+            <p class="text-center">Best,<br>BuildStore team</p>
           </th>
 <th class="expander"></th></tr></tbody></table></th>
         </tr></tbody></table>
         <table class="spacer"><tbody><tr><td height="21" style="font-size:21px;line-height:21px;">&nbsp;</td></tr></tbody></table> 
       </div>
       <div class="mail_container footer__wrapper">
-        <table class="spacer"><tbody><tr><td height="18" style="font-size:18px;line-height:18px;">&nbsp;</td></tr></tbody></table> 
-        <table class="row"><tbody><tr>
-          <th class="small-6 large-6 columns first" valign="middle"><table><tbody><tr><th>
-            <div class="footer__left">© BuildStore 2022</div>
-          </th></tr></tbody></table></th>
-          <th class="small-6 large-6 columns last" valign="middle"><table><tbody><tr><th>
-            <div class="social"><a href="#!" target="_blank"><img src="https://mcusercontent.com/6e30f56d8fc665b08934fa73c/images/13b84101-970d-c090-ec83-72c63fb76525.png" width="16" height="16"></a><a href="#!" target="_blank"><img src="https://mcusercontent.com/6e30f56d8fc665b08934fa73c/images/cfb2f7fe-8dfa-2d99-ec3a-d6403435169d.png" width="16" height="16"></a><a href="#!" target="_blank"><img src="https://mcusercontent.com/6e30f56d8fc665b08934fa73c/images/2dfd5737-5710-ceb6-54c1-2f3c3183f206.png" width="16" height="16"></a></div>
-          </th></tr></tbody></table></th>
-        </tr></tbody></table>
-        <table class="spacer"><tbody><tr><td height="5" style="font-size:5px;line-height:5px;">&nbsp;</td></tr></tbody></table> 
+        <table>
+          <tr>
+            <td>
+              <table class="spacer"><tbody><tr><td height="18" style="font-size:18px;line-height:18px;">&nbsp;</td></tr></tbody></table> 
+              <table class="row"><tbody><tr>
+                <th class="small-6 large-6 columns first" valign="middle"><table><tbody><tr><th>
+                  <div class="footer__left">© BuildStore 2022</div>
+                </th></tr></tbody></table></th>
+                <th class="small-6 large-6 columns last" valign="middle"><table><tbody><tr><th>
+                  <div class="social"><a href="#!" target="_blank"><img src="https://mcusercontent.com/6e30f56d8fc665b08934fa73c/images/13b84101-970d-c090-ec83-72c63fb76525.png" width="16" height="16"></a><a href="#!" target="_blank"><img src="https://mcusercontent.com/6e30f56d8fc665b08934fa73c/images/cfb2f7fe-8dfa-2d99-ec3a-d6403435169d.png" width="16" height="16"></a><a href="#!" target="_blank"><img src="https://mcusercontent.com/6e30f56d8fc665b08934fa73c/images/2dfd5737-5710-ceb6-54c1-2f3c3183f206.png" width="16" height="16"></a></div>
+                </th></tr></tbody></table></th>
+              </tr></tbody></table>
+              <table class="spacer"><tbody><tr><td height="5" style="font-size:5px;line-height:5px;">&nbsp;</td></tr></tbody></table> 
+            </td>
+          </tr>
+        </table>
       </div>
     </td></tr></tbody></table>
     <!--div(style='display:none; white-space:nowrap; font:15px courier; line-height:0;')                                                             -->

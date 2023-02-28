@@ -1661,18 +1661,25 @@ body {
   padding-top: 10px;
   padding-bottom: 10px;
   background: #f3f3f3;
-  min-width: 600px;
 }
 
 .container {
   border-radius: 20px;
   border: #f3f3f3 1px solid;
+  background-color: #fcfdff !important;
   overflow: hidden;
+  width: auto !important;
+  max-width: 600px;
 }
 
 .mail_container {
   padding-left: 15px;
   padding-right: 15px;
+}
+@media (prefers-color-scheme: dark) {
+  .mail_container {
+    background-color: #1E0871;
+  }
 }
 
 table.button {
@@ -1683,10 +1690,14 @@ table.button table td {
   border-radius: 24px;
 }
 
+.img_button {
+  display: inline-block;
+  width: 214px;
+  height: 48px;
+}
+
 .header__wrapper {
-  background-image: url(https://mcusercontent.com/6e30f56d8fc665b08934fa73c/images/9cc9972d-ea53-f7c6-d5fd-03cf2b3836e2.jpeg);
-  background-size: contain;
-  display: table-cell;
+  display: table;
 }
 .header__subtitle {
   font-size: 10px;
@@ -1716,19 +1727,24 @@ table.button table td {
   border-radius: 12px;
 }
 .appUpdates__wrapper {
-  display: table-cell;
   background-image: url(https://mcusercontent.com/6e30f56d8fc665b08934fa73c/images/57c9a312-69dc-9672-250c-79f7b98fe9a2.png);
   background-repeat: no-repeat;
   background-position: 59% 36%;
   background-size: 47px;
+  width: 100%;
 }
 
 .newApp__wrapper {
-  display: table-cell;
   background-image: url(https://mcusercontent.com/6e30f56d8fc665b08934fa73c/images/802e912a-d91b-bf42-e796-4a141b9acbea.png);
   background-repeat: no-repeat;
   background-position: 59% 36%;
   background-size: 45px;
+  width: 100%;
+}
+
+.wrapper-inner {
+  padding-left: 15px;
+  text-align: center;
 }
 
 .appCard {
@@ -1739,6 +1755,8 @@ table.button table td {
   padding-bottom: 8px;
   padding-left: 8px;
   margin-bottom: 4px;
+  width: 150px;
+  height: 40px;
   border-radius: 12px;
   border: #DADADA 1px solid;
   -webkit-transition: 0.3s ease all;
@@ -1746,8 +1764,19 @@ table.button table td {
   transition: 0.3s ease all;
   cursor: pointer;
 }
+.appCard__wrapper {
+  width: 168px;
+  display: inline-block;
+  margin-right: 14px;
+}
 .appCard__img {
   border-radius: 8px;
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  margin-right: 9px;
 }
 .appCard__title, .appCard__descr {
   font-size: 10px;
@@ -1766,26 +1795,57 @@ table.button table td {
 .popular {
   display: table-cell;
   background: #2A1B68;
-  background: -o-radial-gradient(16.14% 21.32%, 61.47% 255.37%, rgba(0, 172, 238, 0.2) 0%, rgba(0, 0, 0, 0) 100%), -o-linear-gradient(0.03deg, #2C1A72 0.03%, #261667 99.97%);
-  background: radial-gradient(61.47% 255.37% at 16.14% 21.32%, rgba(0, 172, 238, 0.2) 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(89.97deg, #2C1A72 0.03%, #261667 99.97%);
   border-radius: 12px;
   padding-left: 26px;
   padding-right: 35px;
 }
+.popular .wrapper-inner {
+  padding-left: 0;
+}
+.popular__inner {
+  display: inline-block;
+  width: 100%;
+  max-width: 315px;
+}
+.popular__inner .wrapper-inner {
+  text-align: inherit;
+}
+.popular__img {
+  display: inline-block;
+  width: 33%;
+  min-width: 157px;
+  background-size: 75%;
+  background-repeat: no-repeat;
+  vertical-align: top;
+}
 .popular__title {
+  display: inline-block;
   color: #ffffff;
+  max-width: 200px;
+  margin-bottom: 4px;
 }
 .popular__version {
+  display: inline-block;
   color: #ffffff;
   text-align: right;
+  float: right;
+  margin-left: 10px;
+  margin-bottom: 8px;
 }
 .popular__descr {
-  color: #ffffff;
+  color: #C6F1FF;
+}
+@media (prefers-color-scheme: dark) {
+  .popular__descr {
+    color: #ffffff;
+  }
 }
 
 .footer__wrapper {
-  display: table-cell;
   background-color: #2A1B68;
+}
+.footer__wrapper > table {
+  width: 100%;
 }
 .footer__left {
   font-size: 10px;

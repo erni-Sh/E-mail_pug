@@ -1,16 +1,16 @@
-.appCard
-	row
-		columns(small=5).pb-0
-			img(
-				src='https://s3.amazonaws.com/cdn.builds.io/cache/01/39/0139303c5e6058d8cf10a9e9e7d494ad@2x.jpg'
-				alt='Movie Box No Ads'
-				width=40
-				height=40
-			).appCard__img
-		columns(small=7 valign='middle').pb-0
-			.appCard__title
-				| Art of War:
-				br
-				| Legions Hack
-			.appCard__descr
-				| Version 2.3.54
+mixin appCard(title, version, trumb, link)
+	a(href= link).appCard
+		table
+			tr
+				td
+					img(
+						src= trumb
+						alt= title
+						width=40
+						height=40
+					).appCard__img
+				td(style='vertical-align: middle')
+					.appCard__title= title
+					.appCard__descr
+						| Version
+						span= version

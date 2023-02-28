@@ -5,18 +5,24 @@ body {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	background: #f3f3f3;
-	min-width: 600px;
+	//max-width: 600px;
 }
 
 .container {
 	border-radius: 20px;
 	border: #f3f3f3 1px solid;
+	background-color: #fcfdff !important;
 	overflow: hidden;
+	width: auto !important;
+	max-width: 600px;
 }
 
 .mail_container {
 	padding-left: 15px;
 	padding-right: 15px;
+	@media (prefers-color-scheme: dark) {
+		background-color: #1E0871;
+	}
 }
 
 table.button {
@@ -27,12 +33,21 @@ table.button {
 	}
 }
 
+.img_button {
+	display: inline-block;
+	width: 214px;
+	height: 48px;
+}
+
 .header {
 	&__wrapper {
+		//height: 220px;
 		//background-image: inline('../assets/digest_top_BG.svg');
-		background-image: url(https://mcusercontent.com/6e30f56d8fc665b08934fa73c/images/9cc9972d-ea53-f7c6-d5fd-03cf2b3836e2.jpeg);
-		background-size: contain;
-		display: table-cell;
+		//background-image: url(https://mcusercontent.com/6e30f56d8fc665b08934fa73c/images/9cc9972d-ea53-f7c6-d5fd-03cf2b3836e2.jpeg);
+		//background-image: url(https://mcusercontent.com/6e30f56d8fc665b08934fa73c/images/686a090e-ee6c-ea93-7568-f9da8aa5b477.jpeg);
+		//background-size: contain;
+		//background-repeat: no-repeat;
+		display: table;
 	}
 
 	&__subtitle {
@@ -77,22 +92,29 @@ table.button {
 
 .appUpdates {
 	&__wrapper {
-		display: table-cell;
+		//display: table-cell;
 		background-image: url(https://mcusercontent.com/6e30f56d8fc665b08934fa73c/images/57c9a312-69dc-9672-250c-79f7b98fe9a2.png);
 		background-repeat: no-repeat;
 		background-position: 59% 36%;
 		background-size: 47px;
+		width: 100%;
 	}
 }
 
 .newApp {
 	&__wrapper {
-		display: table-cell;
+		//display: table-cell;
 		background-image: url(https://mcusercontent.com/6e30f56d8fc665b08934fa73c/images/802e912a-d91b-bf42-e796-4a141b9acbea.png);
 		background-repeat: no-repeat;
 		background-position: 59% 36%;
 		background-size: 45px;
+		width: 100%;
 	}
+}
+
+.wrapper-inner {
+	padding-left: 15px;
+	text-align: center;
 }
 
 .appCard {
@@ -104,14 +126,29 @@ table.button {
 	padding-left: 8px;
 	margin-bottom: 4px;
 
+	width: 150px;
+	height: 40px;
+
 	//box-shadow: 0px 4px 21px rgba(0, 0, 0, 0.25);
 	border-radius: 12px;
 	border: #DADADA 1px solid;
 	transition: .3s ease all;
 	cursor: pointer;
 
+	&__wrapper {
+		width: 168px;
+		display: inline-block;
+		margin-right: 14px;
+	}
+
 	&__img {
 		border-radius: 8px;
+		overflow: hidden;
+		width: 40px;
+		height: 40px;
+		min-width: 40px;
+		min-height: 40px;
+		margin-right: 9px;
 	}
 
 	&__title, &__descr {
@@ -132,32 +169,69 @@ table.button {
 .popular {
 	display: table-cell;
 	background: #2A1B68;
-	background: radial-gradient(61.47% 255.37% at 16.14% 21.32%, rgba(0, 172, 238, 0.2) 0%, rgba(0, 0, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, linear-gradient(89.97deg, #2C1A72 0.03%, #261667 99.97%);
+	//background: radial-gradient(61.47% 255.37% at 16.14% 21.32%, rgba(0, 172, 238, 0.2) 0%, rgba(0, 0, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, linear-gradient(89.97deg, #2C1A72 0.03%, #261667 99.97%);
 	border-radius: 12px;
 	padding-left: 26px;
 	padding-right: 35px;
 
-	&__img {
+	.wrapper-inner {
+		padding-left: 0;
+	}
 
+	&__inner {
+		display: inline-block;
+		width: 100%;
+		max-width: 315px;
+
+		.wrapper-inner {
+			text-align: inherit;
+		}
+	}
+
+	&__img {
+		//width: 120px; 157
+		//height: 231px; //100%
+		//display: block;
+		//overflow: auto;
+		//height: 212px;
+		display: inline-block;
+		width: 33%;
+		min-width: 157px;
+		background-size: 75%;
+		background-repeat: no-repeat;
+		vertical-align: top;
 	}
 
 	&__title {
+		display: inline-block;
 		color: $white;
+		max-width: 200px;
+		margin-bottom: 4px;
 	}
 	&__version {
+		display: inline-block;
 		color: $white;
 		text-align: right;
+		float: right;
+		margin-left: 10px;
+		margin-bottom: 8px;
 	}
 	&__descr {
-		color: $white;
+		color: $text_blue;
+		@media (prefers-color-scheme: dark) {
+			color: $white;
+		}
 	}
+
 }
 
 .footer {
 	&__wrapper {
-		display: table-cell;
+		//display: table-cell;
 		background-color: #2A1B68;
-		//margin-bottom: -7px;
+		& > table {
+			width: 100%;
+		}
 	}
 
 	&__left {
