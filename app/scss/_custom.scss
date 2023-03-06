@@ -20,9 +20,9 @@ body {
 .mail_container {
 	padding-left: 15px;
 	padding-right: 15px;
-	@media (prefers-color-scheme: dark) {
-		background-color: #1E0871;
-	}
+	//@media (prefers-color-scheme: dark) {
+	//	background-color: #1E0871;
+	//}
 }
 
 table.button {
@@ -167,26 +167,32 @@ table.button {
 }
 
 .popular {
-	display: table-cell;
+	display: table;
+	width: 100%;
 	background: #2A1B68;
 	//background: radial-gradient(61.47% 255.37% at 16.14% 21.32%, rgba(0, 172, 238, 0.2) 0%, rgba(0, 0, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, linear-gradient(89.97deg, #2C1A72 0.03%, #261667 99.97%);
 	border-radius: 12px;
 	padding-left: 26px;
 	padding-right: 35px;
 
-	.wrapper-inner {
-		padding-left: 0;
-	}
+	//.wrapper-inner {
+	//	padding-left: 10px;
+	//	padding-right: 10px;
+	//}
 
-	&__inner {
-		display: inline-block;
-		width: 100%;
-		max-width: 315px;
-
-		.wrapper-inner {
-			text-align: inherit;
-		}
-	}
+	//&__inner {
+	//	display: inline-block;
+	//	//width: 100%;
+	//	max-width: 315px;
+	//	padding-left: 15px;
+	//	padding-right: 15px;
+	//
+	//	.wrapper-inner {
+	//		padding-left: 0;
+	//		padding-right: 0;
+	//		text-align: inherit;
+	//	}
+	//}
 
 	&__img {
 		//width: 120px; 157
@@ -194,19 +200,45 @@ table.button {
 		//display: block;
 		//overflow: auto;
 		//height: 212px;
-		display: inline-block;
-		width: 33%;
-		min-width: 157px;
-		background-size: 75%;
-		background-repeat: no-repeat;
-		vertical-align: top;
+		//display: inline-block;
+		//width: 33%;
+		//min-width: 157px;
+		//width: 120px;
+		//background-size: 75%;
+		//background-repeat: no-repeat;
+		//vertical-align: top;
+		//margin-right: 15px;
+		//margin-left: 15px;
+		//margin-bottom: 15px;
+
+		padding-left: 25px;
+		width: 123px;
+
+		& > img {
+			width: 72px;
+			height: 72px;
+			border-radius: 12px;
+			border: 1px solid white;
+		}
 	}
 
 	&__title {
 		display: inline-block;
 		color: $white;
-		max-width: 200px;
 		margin-bottom: 4px;
+
+		&__badge {
+			margin-bottom: 5px;
+		}
+
+		&__wrapper {
+			vertical-align: middle;
+			padding-right: 25px;
+			& > img {
+				width: 108px;
+				height: 22px;
+			}
+		}
 	}
 	&__version {
 		display: inline-block;
@@ -217,9 +249,11 @@ table.button {
 		margin-bottom: 8px;
 	}
 	&__descr {
-		color: $text_blue;
-		@media (prefers-color-scheme: dark) {
-			color: $white;
+		padding-left: 25px;
+		padding-right: 25px;
+
+		& > p {
+			color: $text_blue;
 		}
 	}
 

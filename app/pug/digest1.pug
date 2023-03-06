@@ -10,7 +10,7 @@ block main
 	- var month = 'January 2023';
 	- var digestNumber = '1';
 	- var preText = 'Anticipated updates and mind-blowing novelties in one digest';
-	- var greeting = 'Hey, [UserName]';
+	- var greeting = 'Hey, *|FNAME|*';
 	- var emailBody = `This winter BuildStore became better, more advanced, and more diverse. We gathered for you some exciting updates of the service over the past season. And there's more to come!`;
 
 	- var linkBtnAllUpdates = 'http://bit.ly/3INrmpz';
@@ -19,13 +19,17 @@ block main
 
 	- var bottomText = `That's it for this time. And while we're preparing a new roundup for you, enjoy your BuildStore!`;
 
+	- var socialLinkReddit = 'http://bit.ly/3Ygcd4T';
+	- var socialLinkFB = 'https://bit.ly/3Zf5tWe';
+	- var socialLinkTwitter = 'https://bit.ly/3ZAcq3K';
+
 	include ./includes/arrayAppsUpdates
 	include ./includes/arrayAppsNew
 	include ./includes/objectMostPopulatApp
 	container
 		//- -------------------------  HEADER ------------------------
 		.header__wrapper
-			img(src="https://mcusercontent.com/6e30f56d8fc665b08934fa73c/images/4d3de482-b871-b61b-34fa-7a9d12f0554d.jpeg")
+			img(src="https://mcusercontent.com/6e30f56d8fc665b08934fa73c/images/270988c1-a265-f7d2-be78-dd17fdbd21c4.jpeg")
 			//row
 			//	columns.header
 					//spacer(size=32)
@@ -152,20 +156,20 @@ block main
 			row
 				columns
 					a(href= mostPopularApp.link).popular
-						spacer(size=30)
-						wrapper
-							.popular__img(style='background-image: url(https://mcusercontent.com/6e30f56d8fc665b08934fa73c/images/d16d9221-a5e8-9f2a-c7df-b39570a4198c.png)')
-								| &nbsp;
-							.popular__inner
-								wrapper
-									h6.popular__title= mostPopularApp.title
-									.popular__version Version&nbsp;
-										span= mostPopularApp.version
-
-								row
-									columns(small=12).pb-0
-										p.popular__descr= mostPopularApp.description
-								spacer(size=20)
+						spacer(size=24)
+						table
+							tr
+								td.popular__img
+									img(src='https://s3.amazonaws.com/cdn.builds.io/cache/af/f6/aff6119a943f64df8b6ad2227c2ebba8.jpg' width=74 height=74)
+								td.popular__title__wrapper
+									img(src='https://mcusercontent.com/6e30f56d8fc665b08934fa73c/images/447102b3-ea55-5437-35fb-bb0f77d0855c.png' width=108 height=22).popular__title__badge
+									h5.popular__title= mostPopularApp.title
+						spacer(size=15)
+						table
+							tr
+								td.popular__descr
+									p= mostPopularApp.description
+						spacer(size=14)
 
 
 
@@ -206,7 +210,7 @@ block main
 						row
 							columns(small='6' valign='middle')
 								.footer__left
-									| © BuildStore 2022
+									| © BuildStore 2023
 							columns(small='6' valign='middle')
 								include includes/social_list
 						spacer(size=5)

@@ -1676,11 +1676,6 @@ body {
   padding-left: 15px;
   padding-right: 15px;
 }
-@media (prefers-color-scheme: dark) {
-  .mail_container {
-    background-color: #1E0871;
-  }
-}
 
 table.button {
   margin-left: auto;
@@ -1793,36 +1788,38 @@ table.button table td {
 }
 
 .popular {
-  display: table-cell;
+  display: table;
+  width: 100%;
   background: #2A1B68;
   border-radius: 12px;
   padding-left: 26px;
   padding-right: 35px;
 }
-.popular .wrapper-inner {
-  padding-left: 0;
-}
-.popular__inner {
-  display: inline-block;
-  width: 100%;
-  max-width: 315px;
-}
-.popular__inner .wrapper-inner {
-  text-align: inherit;
-}
 .popular__img {
-  display: inline-block;
-  width: 33%;
-  min-width: 157px;
-  background-size: 75%;
-  background-repeat: no-repeat;
-  vertical-align: top;
+  padding-left: 25px;
+  width: 123px;
+}
+.popular__img > img {
+  width: 72px;
+  height: 72px;
+  border-radius: 12px;
+  border: 1px solid white;
 }
 .popular__title {
   display: inline-block;
   color: #ffffff;
-  max-width: 200px;
   margin-bottom: 4px;
+}
+.popular__title__badge {
+  margin-bottom: 5px;
+}
+.popular__title__wrapper {
+  vertical-align: middle;
+  padding-right: 25px;
+}
+.popular__title__wrapper > img {
+  width: 108px;
+  height: 22px;
 }
 .popular__version {
   display: inline-block;
@@ -1833,12 +1830,11 @@ table.button table td {
   margin-bottom: 8px;
 }
 .popular__descr {
-  color: #C6F1FF;
+  padding-left: 25px;
+  padding-right: 25px;
 }
-@media (prefers-color-scheme: dark) {
-  .popular__descr {
-    color: #ffffff;
-  }
+.popular__descr > p {
+  color: #C6F1FF;
 }
 
 .footer__wrapper {
