@@ -1,289 +1,59 @@
 @import '_settings.scss';
+@import '_normalaize.scss';
 $blue-background: #EAF7FF;
 
-body {
-	padding-top: 10px;
-	padding-bottom: 10px;
-	background: #f3f3f3;
-	//max-width: 600px;
-}
-
-.container {
-	border-radius: 20px;
-	border: #f3f3f3 1px solid;
-	background-color: #fcfdff !important;
-	overflow: hidden;
-	width: auto !important;
-	max-width: 600px;
-}
-
-.mail_container {
-	padding-left: 15px;
-	padding-right: 15px;
-	//@media (prefers-color-scheme: dark) {
-	//	background-color: #1E0871;
-	//}
-}
-
-table.button {
-	margin-left: auto;
-	margin-right: auto;
-	table td {
-		border-radius: 24px;
-	}
-}
-
-.img_button {
-	display: inline-block;
-	width: 214px;
-	height: 48px;
-}
-
 .header {
-	&__wrapper {
-		//height: 220px;
-		//background-image: inline('../assets/digest_top_BG.svg');
-		//background-image: url(https://mcusercontent.com/6e30f56d8fc665b08934fa73c/images/9cc9972d-ea53-f7c6-d5fd-03cf2b3836e2.jpeg);
-		//background-image: url(https://mcusercontent.com/6e30f56d8fc665b08934fa73c/images/686a090e-ee6c-ea93-7568-f9da8aa5b477.jpeg);
-		//background-size: contain;
-		//background-repeat: no-repeat;
-		display: table;
-	}
+	background-color: #F6FAFD;
 
-	&__subtitle {
-		font-size: 10px;
+	p {
+		font-size: 9px;
+		font-family: $Helvetica;
+		color: #212353;
+		opacity: .3;
 		text-align: center;
-		color: $white;
 	}
 
-	&__title {
-		line-height: 50px;
-		text-align: center;
-		color: $yellow;
-
-		&__wrapper {
-			padding-bottom: 1px !important;
-		}
-	}
-
-	&__descr {
-		text-align: center;
-		color: $white;
-		margin-bottom: 9px;
-	}
-
-}
-
-.blueParagraph {
-	background: $blue-background;
-	padding-top: 15px;
-	padding-right: 17px;
-	padding-bottom: 9px;
-	padding-left: 17px;
-	border-radius: 12px;
-
-	h6 {
-	}
-
-	&__content {
-
-	}
-}
-
-.appUpdates {
-	&__wrapper {
-		//display: table-cell;
-		background-image: url(https://mcusercontent.com/6e30f56d8fc665b08934fa73c/images/57c9a312-69dc-9672-250c-79f7b98fe9a2.png);
-		background-repeat: no-repeat;
-		background-position: 59% 36%;
-		background-size: 47px;
-		width: 100%;
-	}
-}
-
-.newApp {
-	&__wrapper {
-		//display: table-cell;
-		background-image: url(https://mcusercontent.com/6e30f56d8fc665b08934fa73c/images/802e912a-d91b-bf42-e796-4a141b9acbea.png);
-		background-repeat: no-repeat;
-		background-position: 59% 36%;
-		background-size: 45px;
-		width: 100%;
-	}
-}
-
-.wrapper-inner {
-	padding-left: 15px;
-	text-align: center;
-}
-
-.appCard {
-	display: inline-block;
-	background: #FFFFFF;
-	padding-top: 8px;
-	padding-right: 8px;
-	padding-bottom: 8px;
-	padding-left: 8px;
-	margin-bottom: 4px;
-
-	width: 150px;
-	height: 40px;
-
-	//box-shadow: 0px 4px 21px rgba(0, 0, 0, 0.25);
-	border-radius: 12px;
-	border: #DADADA 1px solid;
-	transition: .3s ease all;
-	cursor: pointer;
-
-	&__wrapper {
-		width: 168px;
-		display: inline-block;
-		margin-right: 14px;
-	}
-
-	&__img {
-		border-radius: 8px;
-		overflow: hidden;
-		width: 40px;
-		height: 40px;
-		min-width: 40px;
-		min-height: 40px;
-		margin-right: 9px;
-	}
-
-	&__title, &__descr {
-		font-size: 10px;
-		line-height: 11px;
-	}
-	&__descr {
-		opacity: 0.5;
-	}
-	@media (hover: hover) {
-		&:hover {
-			background: $yellow;
-			border: white 1px solid;
-		}
-	}
-}
-
-.popular {
-	display: table;
-	width: 100%;
-	background: #2A1B68;
-	//background: radial-gradient(61.47% 255.37% at 16.14% 21.32%, rgba(0, 172, 238, 0.2) 0%, rgba(0, 0, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, linear-gradient(89.97deg, #2C1A72 0.03%, #261667 99.97%);
-	border-radius: 12px;
-	padding-left: 26px;
-	padding-right: 35px;
-
-	//.wrapper-inner {
-	//	padding-left: 10px;
-	//	padding-right: 10px;
-	//}
-
-	//&__inner {
-	//	display: inline-block;
-	//	//width: 100%;
-	//	max-width: 315px;
-	//	padding-left: 15px;
-	//	padding-right: 15px;
-	//
-	//	.wrapper-inner {
-	//		padding-left: 0;
-	//		padding-right: 0;
-	//		text-align: inherit;
-	//	}
-	//}
-
-	&__img {
-		//width: 120px; 157
-		//height: 231px; //100%
-		//display: block;
-		//overflow: auto;
-		//height: 212px;
-		//display: inline-block;
-		//width: 33%;
-		//min-width: 157px;
-		//width: 120px;
-		//background-size: 75%;
-		//background-repeat: no-repeat;
-		//vertical-align: top;
-		//margin-right: 15px;
-		//margin-left: 15px;
-		//margin-bottom: 15px;
-
-		padding-left: 25px;
-		width: 123px;
-
-		& > img {
-			width: 72px;
-			height: 72px;
-			border-radius: 12px;
-			border: 1px solid white;
-		}
-	}
-
-	&__title {
-		display: inline-block;
-		color: $white;
-		margin-bottom: 4px;
-
-		&__badge {
-			margin-bottom: 5px;
-		}
-
-		&__wrapper {
-			vertical-align: middle;
-			padding-right: 25px;
-			& > img {
-				width: 108px;
-				height: 22px;
-			}
-		}
-	}
-	&__version {
-		display: inline-block;
-		color: $white;
-		text-align: right;
-		float: right;
-		margin-left: 10px;
-		margin-bottom: 8px;
-	}
-	&__descr {
-		padding-left: 25px;
-		padding-right: 25px;
-
-		& > p {
-			color: $text_blue;
-		}
-	}
-
-}
-
-.footer {
-	&__wrapper {
-		//display: table-cell;
-		background-color: #2A1B68;
-		& > table {
-			width: 100%;
-		}
-	}
-
-	&__left {
-		font-size: 10px;
-		color: $white;
-	}
-}
-
-.social {
-	text-align: right;
 	a {
 		display: inline-block;
 	}
 	a + a {
-		margin-left: 24px;
+		margin-left: 16px;
 	}
 }
 
-.pb-0 {
-	padding-bottom: 0 !important;
+.main_top {
+	background: url(https://mcusercontent.com/6e30f56d8fc665b08934fa73c/images/8a495fd4-3025-c079-405b-f951069eefce.png);
+	background-size: cover;
+	box-shadow: 0px 4px 23px rgba(24, 9, 49, 0.1);
+
+	h4 {
+		font-family: $Helvetica;
+	}
+
+	p {
+		max-width: 416px;
+		word-wrap: normal;
+	}
+}
+
+.BG {
+	&__circle_yellow {
+		background: url(https://mcusercontent.com/6e30f56d8fc665b08934fa73c/images/0521b561-9e11-bb8e-74f1-5dc338101869.png);
+		background-repeat: no-repeat;
+		background-size: 33px 33px;
+		background-position: 97% 82%;
+	}
+
+	&__circle_blue {
+		background: url(https://mcusercontent.com/6e30f56d8fc665b08934fa73c/images/273bd7e6-a050-efb8-4a8f-c8595ed2a976.png);
+		background-repeat: no-repeat;
+		background-size: 82px 97px;
+		background-position: 0 44%;
+	}
+}
+
+.mail_list {
+	li {
+		margin-bottom: 6px;
+	}
 }
