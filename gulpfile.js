@@ -1,4 +1,5 @@
 const gulp = require('gulp'),
+      validator = require('gulp-html'),
       // sass = require('gulp-sass'),
       sass = require('gulp-dart-sass'),
 
@@ -68,6 +69,25 @@ gulp.task('clean', function() {
 //     .pipe(gulp.dest('dist/'));
 // });
 
+gulp.task('html', function(){
+  return gulp.src('app/html/*.html')
+    .pipe(inky())
+    .pipe(base64('',{
+      prefix: "",
+      suffix: ""
+    }))
+    // for deploy
+    .pipe(inlineCss({
+      // url: env._host,
+      applyStyleTags: true,
+      removeStyleTags: true,
+      preserveMediaQueries: true,
+      removeLinkTags: true
+    }))
+    .pipe(gulp.dest('dist/'))
+    .pipe(browserSync.reload({stream: true}));
+});
+
 gulp.task('pug-local', function(){
   return gulp.src('app/pug/*.pug')
     .pipe(pug({pretty: true}).on('error', notify.onError({
@@ -80,13 +100,13 @@ gulp.task('pug-local', function(){
       suffix: ""
     }))
     // for deploy
-    // .pipe(inlineCss({
-    //   // url: env._host,
-    //   applyStyleTags: true,
-    //   removeStyleTags: true,
-    //   preserveMediaQueries: true,
-    //   removeLinkTags: true
-    // }))
+    .pipe(inlineCss({
+      // url: env._host,
+      applyStyleTags: true,
+      removeStyleTags: true,
+      preserveMediaQueries: true,
+      removeLinkTags: true
+    }))
     .pipe(gulp.dest('dist/'))
     .pipe(browserSync.reload({stream: true}))
 });
@@ -109,6 +129,7 @@ gulp.task('browser-sync', function() {
 gulp.task('watch-local', function(done){
   gulp.watch('app/scss/**/*.scss', gulp.series('scss', 'pug-local'));
   gulp.watch('app/pug/**/*.pug', gulp.series('pug-local'));
+  gulp.watch('app/html/**/*.html', gulp.series('html'));
 
   // gulp.watch(['app/{layouts,partials,helpers,data}/**/*'], [panini.refresh]);
   // gulp.watch('app/js/**/*.js', gulp.series('js'));
@@ -120,6 +141,7 @@ gulp.task('default', gulp.series(
   'clean',
   'scss',
   'pug-local',
+  'html',
   // 'panini',
   'watch-local',
   'browser-sync'))

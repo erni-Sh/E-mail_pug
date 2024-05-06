@@ -1673,8 +1673,8 @@ body {
 }
 
 .mail_container {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 18px;
+  padding-right: 18px;
 }
 
 table.button {
@@ -1738,22 +1738,15 @@ table.button table td {
 }
 
 .wrapper-inner {
-  padding-left: 15px;
-  text-align: center;
+  text-align: left;
 }
 
 .appCard {
   display: inline-block;
   background: #FFFFFF;
-  padding-top: 8px;
-  padding-right: 8px;
-  padding-bottom: 8px;
-  padding-left: 8px;
-  margin-bottom: 4px;
-  width: 150px;
-  height: 40px;
-  border-radius: 12px;
-  border: #DADADA 1px solid;
+  margin-bottom: 16px;
+  width: 176px;
+  height: 56px;
   -webkit-transition: 0.3s ease all;
   -o-transition: 0.3s ease all;
   transition: 0.3s ease all;
@@ -1767,15 +1760,16 @@ table.button table td {
 .appCard__img {
   border-radius: 8px;
   overflow: hidden;
-  width: 40px;
-  height: 40px;
-  min-width: 40px;
-  min-height: 40px;
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
+  min-height: 56px;
   margin-right: 9px;
 }
 .appCard__title, .appCard__descr {
-  font-size: 10px;
-  line-height: 11px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 24px;
 }
 .appCard__descr {
   opacity: 0.5;

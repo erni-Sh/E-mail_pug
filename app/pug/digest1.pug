@@ -23,7 +23,7 @@ block main
 	- var socialLinkFB = 'https://bit.ly/3Zf5tWe';
 	- var socialLinkTwitter = 'https://bit.ly/3ZAcq3K';
 
-	include ./includes/arrayAppsUpdates
+	include ./includes/arrayAppsData
 	include ./includes/arrayAppsNew
 	include ./includes/objectMostPopulatApp
 	container
@@ -98,7 +98,7 @@ block main
 			include includes/app-card
 
 			wrapper
-				each appLine in appsUpdates
+				each appLine in appsDataHalloween
 					each app in appLine
 						.appCard__wrapper
 							+appCard(app.title, app.version, app.trumb, app.link)

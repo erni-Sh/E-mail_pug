@@ -1,0 +1,22 @@
+extends ./layouts/default.pug
+
+block title
+	| BuildStore's hottest winter news
+
+block description
+	| 
+
+block main
+
+	include ./includes/arrayAppsData
+
+	container
+		//- -------------------------  HEADER ------------------------
+		.mail_container
+			include includes/app-card
+
+			wrapper
+				each appLine in appsDataHalloween
+					each app in appLine
+						.appCard__wrapper
+							+appCard(app.title, app.version, app.trumb, app.link)

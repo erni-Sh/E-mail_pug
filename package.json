@@ -38,6 +38,7 @@
   },
   "devDependencies": {
     "gulp-css-base64": "^2.0.0",
+    "gulp-html": "^6.0.0",
     "gulp-inline-css": "^4.0.0"
   }
 }
